@@ -1,8 +1,10 @@
-import bot from '../assets/bot.svg'
-import user from '../assets/user.svg'
+import '../scss/styles.scss'
+import * as bootstrap from 'bootstrap'
+import 'bootstrap-icons/font/bootstrap-icons.css'
 
-const form = document.querySelector('form')
-const chatContainer = document.querySelector('#chat_container')
+const sendMessageButton = document.querySelector('#send-message')
+const chatContainer = document.querySelector('#chat-container')
+const promptText = document.querySelector('#prompt')
 
 let loadInterval
 
@@ -33,9 +35,6 @@ function typeText(element, text) {
   }, 20)
 }
 
-// generate unique ID for each message div of bot
-// necessary for typing text effect for that specific reply
-// without unique ID, typing text will work on every element
 function generateUniqueId() {
   const timestamp = Date.now();
   const randomNumber = Math.random();
@@ -45,33 +44,32 @@ function generateUniqueId() {
 }
 
 function chatStripe(isAi, value, uniqueId) {
-  return (
-    `
-        <div class="wrapper ${isAi && 'ai'}">
-            <div class="chat">
-                <div class="profile">
-                    <img 
-                      src=${isAi ? bot : user} 
-                      alt="${isAi ? 'bot' : 'user'}" 
-                    />
-                </div>
-                <div class="message" id=${uniqueId}>${value}</div>
+    return (
+        `
+        <div class="message${isAi === true? '-ai':''}">
+            <div class="d-inline-block bg-white rounded-lg py-1 px-2 shadow">
+            <span id=${uniqueId}>${value}</span>              
+              <small class="p-1 text-gray text-small "></small>
             </div>
-        </div>
-    `
-  )
+          </div>
+        `
+    )
 }
 
-const handleSubmit = async (e) => {
+const addPoint = (str) => {
+  if (/^[A-Za-z0-9]*$/.test(str.charAt(str.length - 1))) {
+    return str + '.'
+  }
+  return str
+}
+
+const sendMessage = async (e) => {
   e.preventDefault()
-
-  const data = new FormData(form)
-
+  const data = (promptText.value).trim()
   // user's chatstripe
-  chatContainer.innerHTML += chatStripe(false, data.get('prompt'))
-
-  // to clear the textarea input 
-  form.reset()
+  chatContainer.innerHTML += chatStripe(false, data)
+  // to clear the textarea input
+  document.querySelector('#prompt').value = '';
 
   // bot's chatstripe
   const uniqueId = generateUniqueId()
@@ -83,17 +81,16 @@ const handleSubmit = async (e) => {
   // specific message div 
   const messageDiv = document.getElementById(uniqueId)
 
-  // messageDiv.innerHTML = "..."
+  messageDiv.innerHTML = "..."
   loader(messageDiv)
 
   const response = await fetch('http://localhost:5000', {
-  // const response = await fetch('https://ai-chat-24k0.onrender.com', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      prompt: data.get('prompt')
+      prompt: addPoint(data)
     })
   })
 
@@ -111,11 +108,13 @@ const handleSubmit = async (e) => {
     messageDiv.innerHTML = "Something went wrong"
     alert(err)
   }
+
+  return false;
 }
 
-form.addEventListener('submit', handleSubmit)
-form.addEventListener('keyup', (e) => {
+sendMessageButton.addEventListener('click', sendMessage.bind(this))
+promptText.addEventListener('keyup', (e) => {
   if (e.keyCode === 13) {
-    handleSubmit(e)
+    sendMessage(e)
   }
 })
