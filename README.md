@@ -1,5 +1,3 @@
-# EasyEssay 💬
-
 # EasyEssay
 This is a simple web site for the students based on NodeJS using OpenAI
 
