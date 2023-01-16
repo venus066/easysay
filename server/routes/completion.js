@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import API from "../app/api.js";
+import isAuthenticated from './middleware/isAuthenticated.js';
 
 const router = Router();
 

@@ -1,4 +1,4 @@
-const auth = function(req, res, next){
+const isAuthenticated = function(req, res, next) {
     if (req.session.isAuthenticated) {
         next();
     } else {
@@ -6,4 +6,4 @@ const auth = function(req, res, next){
     }
 }
 
-export default auth;
+export default isAuthenticated;

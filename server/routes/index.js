@@ -1,6 +1,5 @@
 import { Router } from 'express';
 import completion from './completion.js';
-import user from './page.js';
 import auth from './auth.js'
 
 const router = Router();
