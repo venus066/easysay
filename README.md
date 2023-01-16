@@ -14,15 +14,7 @@ This is a simple web site for the students based on NodeJS using OpenAI
 - Plagiarism checker
 
 ## Installation and execution
-### Frontend
-```bash
-$ cd client
-$ npm install
-$ npm run dev
-```
-The frontend is working on http://127.0.0.1:8000/
 
-### Backend
 ```bash
 $ cd server
 $ npm install

@@ -1,7 +1,3 @@
-import '../scss/styles.scss'
-import * as bootstrap from 'bootstrap'
-import 'bootstrap-icons/font/bootstrap-icons.css'
-
 const sendMessageButton = document.querySelector('#send-message')
 const chatContainer = document.querySelector('#chat-container')
 const promptText = document.querySelector('#prompt')
@@ -75,7 +71,7 @@ const sendMessage = async (e) => {
   const uniqueId = generateUniqueId()
   chatContainer.innerHTML += chatStripe(true, " ", uniqueId)
 
-  // to focus scroll to the bottom 
+  // to focus scroll to the bottom
   chatContainer.scrollTop = chatContainer.scrollHeight;
 
   // specific message div 
@@ -84,7 +80,7 @@ const sendMessage = async (e) => {
   messageDiv.innerHTML = "..."
   loader(messageDiv)
 
-  const response = await fetch('http://localhost:5000', {
+  const response = await fetch('http://localhost:5000/api/completion', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

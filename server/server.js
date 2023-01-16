@@ -1,50 +1,76 @@
 import express from 'express';
 import * as dotenv from 'dotenv';
 import cors from 'cors';
-import { Configuration, OpenAIApi } from 'openai';
+import mongoose from 'mongoose';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import sassMiddleware from 'node-sass-middleware'
+
+import routes from './routes/index.js';
+import pageRoutes from './routes/page.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 dotenv.config();
-
-const configuration = new Configuration({
-    apiKey: process.env.OPENAI_API_KEY,
-    // organization: process.env.ORGANIATION_ID,
-});
-
-const openai = new OpenAIApi(configuration);
-
 const app = express();
 
+// views engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(
+    "/stylesheets",
+    express.static(path.join(__dirname, "node_modules/bootstrap/dist/css"))
+)
+
+app.use(
+    "/stylesheets",
+    express.static(path.join(__dirname, "node_modules/bootstrap-icons/font"))
+)
+
+app.use(
+    "/javascripts",
+    express.static(path.join(__dirname, "node_modules/bootstrap/dist/js"))
+)
+
+var srcPath = __dirname + '/sass';
+var destPath = __dirname + '/public/stylesheets';
+
+app.use('/stylesheets', sassMiddleware({
+    src: srcPath,
+    dest: destPath,
+    debug: true,
+    outputStyle: 'compressed'
+}));
+
 app.use(cors());
+
 app.use(express.json());
 
-app.get('/', async (req, res) => {
-    res.status(200).send({
-        message: 'Hello from HLABZ A.I. 🙋🏻‍♂️',
+app.use('/api', routes);
+app.use('/', pageRoutes);
+
+const uri = process.env.MONGODB_CONNECTION_URL;
+const PORT = process.env.PORT;
+
+try {
+    mongoose.set('strictQuery', false);
+    mongoose.connect(`${uri}`, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
     })
-});
 
-app.post('/', async (req, res) => {
-    try {
-        const prompt = req.body.prompt;
-        console.log('prompt:', prompt);
-        const response = await openai.createCompletion({
-            model: "text-davinci-003",
-            // model: "text-curie-001",
-            prompt: `${prompt}`,
-            temperature: 0.9,
-            max_tokens: 150,
-            top_p: 1,
-            frequency_penalty: 0,
-            presence_penalty: 0.6,
-        });
-
-        res.status(200).send({
-            bot: response.data.choices[0].text
-        })
-    } catch (error) {
-        console.log(error);
-        res.status(500).send({ error })
-    }
-})
-
-app.listen(5000, () => console.log('Server is running on port http://localhost:5000'));
+    mongoose.connection.on('open', async () => {
+        try {
+            app.listen({ port: PORT, host: '0.0.0.0' }, () => {
+                console.log('Server started and database connected')
+            })
+        } catch (err) { console.log(err) }
+    })
+} catch (error) {
+    console.log(error)
+    process.exit(0);
+}

@@ -1,5 +1,3 @@
-@import "~bootstrap/scss/bootstrap";
-
 /* Define the size of logo */
 .logo-image {
   height: 40px;
@@ -122,8 +120,8 @@
   background-color: #368bda;
   width: 40px;
   height: 40px;
-  -webkit-mask: url(/assets/bot.svg) no-repeat center;
-  mask: url(/assets/logo.svg) no-repeat center;
+  -webkit-mask: url(/images/bot.svg) no-repeat center;
+  mask: url(/images/logo.svg) no-repeat center;
 }
 /* chat */
 input:focus, textarea:focus, select:focus { outline: none }
