@@ -15,4 +15,8 @@ router.get('/signup', function(req, res, next) {
     res.render('signup', { title: 'Express' });
 });
 
+router.get('/error', function(req, res, next) {
+    res.render('error', { message: 'Access forbidden', error: 403 });
+});
+
 export default router;

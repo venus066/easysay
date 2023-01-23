@@ -5,3 +5,4 @@
 /client/yarn.lock
 /server/yarn.lock
 /server/.env
+*.lock

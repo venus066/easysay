@@ -14,6 +14,7 @@ export const loginUser = async function (req, res) {
         .required(),
       password: yup.string().min(3).max(50).required(),
     });
+
     await schema.validate(data);
     authController.loginUser(req, res);
   } catch (e) {

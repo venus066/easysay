@@ -18,14 +18,16 @@ export const loginUser = function (req, result) {
             userId: resultOfQuery._id,
           };
 
-          let token = jwt.sign({ payloadData }, process.env.PRIVATE_KEY, {
-            expiresIn: "1d",
-            algorithm: "HS256",
-          });
+          // let token = jwt.sign({ payloadData }, process.env.PRIVATE_KEY, {
+          //   expiresIn: "1d",
+          //   algorithm: "HS256",
+          // });
+
+          req.session.isAuthenticated = true;
 
           let resultLoginUser = {
             message: "User Login Successfully",
-            token: token,
+            result: true,
             displayName: resultOfQuery.displayName,
             userId: resultOfQuery._id,
           };
