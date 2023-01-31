@@ -20,6 +20,16 @@ export const registerUser = function (req, res) {
   });
 };
 
+export const accessToken = function (req, res) {
+  authService.accessToken(req, function (error, result) {
+    if (error) {
+      res.status(400).send(error);
+    } else {
+      res.status(200).send(result);
+    }
+  });
+};
+
 export const resetPasswordLink = function (req, res) {
   authService.resetPasswordLink(req, function (error, result) {
     if (error) {

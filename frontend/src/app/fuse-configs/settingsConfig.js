@@ -10,10 +10,10 @@ const settingsConfig = {
     // navbar: 'greyDark',
     // toolbar: 'mainThemeLight',
     // footer: 'mainThemeDark',
-    main: 'light12',
-    navbar: 'light12',
-    toolbar: 'light12',
-    footer: 'light12',
+    main: 'light5',
+    navbar: 'light5',
+    toolbar: 'light5',
+    footer: 'light5',
 
   },
 };

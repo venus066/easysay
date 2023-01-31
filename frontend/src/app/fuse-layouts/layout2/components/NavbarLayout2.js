@@ -1,10 +1,8 @@
 import FuseScrollbars from '@fuse/core/FuseScrollbars';
 import { makeStyles } from '@material-ui/core/styles';
 import Logo from 'app/fuse-layouts/shared-components/Logo';
-import Navigation from 'app/fuse-layouts/shared-components/Navigation';
 import clsx from 'clsx';
 import { memo } from 'react';
-import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import {Link} from "react-router-dom";
 import {useSelector} from "react-redux";
@@ -38,7 +36,7 @@ function NavbarLayout2(props) {
         <FuseScrollbars className="flex h-full items-center button-group">
           {login.success === true?
               (<Link to="/upgrade" role="button">
-                <Button variant="contained" color="btn-danger" className={classes.button}>
+                <Button variant="contained" color="primary" className={classes.button}>
                   Upgrade
                 </Button>
               </Link>)

@@ -64,7 +64,7 @@ function Login() {
               animate={{ opacity: 1, transition: { delay: 0.2 } }}
             >
               <div className="flex items-center mb-48">
-                <img className="logo-icon w-160" src="assets/images/logos/easyessay.png" alt="logo" />
+                <img className="logo-icon w-160" src="assets/images/logos/quickpen.png" alt="logo" />
               </div>
             </motion.div>
 
@@ -97,7 +97,7 @@ function Login() {
             >
               <Typography variant="h3" color="inherit" className="font-semibold leading-tight">
                 Welcome <br />
-                to the <br /> EasyEssay!
+                to the <br /> QuickPen!
               </Typography>
             </motion.div>
 

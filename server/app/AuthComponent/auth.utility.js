@@ -13,14 +13,24 @@ export const registerUser = function (req, result) {
         userId: resultOfQuery._id,
       };
       //   console.log(resultOfQuery);
-      let token = jwt.sign({ payloadData }, process.env.PRIVATE_KEY, {
+      let access_token = jwt.sign({ payloadData }, process.env.PRIVATE_KEY, {
         expiresIn: "1d",
       });
       let resultRegisterUser = {
         message: "User register successfully",
-        token: token,
-        displayName: resultOfQuery.displayName,
-        userId: resultOfQuery._id,
+        access_token: access_token,
+        user: {
+          // displayName: resultOfQuery.displayName,
+          // email: resultOfQuery.email,
+          role: 'admin',
+          data: {
+            displayName: resultOfQuery.displayName,
+            photoURL: 'assets/images/avatars/Abbott.jpg',
+            email: resultOfQuery.email,
+            settings: {},
+            shortcuts: []
+          }
+        }
       };
       result(null, resultRegisterUser);
     }

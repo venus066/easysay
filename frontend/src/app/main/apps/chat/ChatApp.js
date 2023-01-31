@@ -149,68 +149,6 @@ function ChatApp(props) {
 
       <div className={clsx(classes.contentCardWrapper, 'container')}>
         <div className={clsx(classes.contentCard, 'shadow rounded-20')}>
-          {/*<Hidden mdUp>
-            <SwipeableDrawer
-              className="h-full absolute z-20"
-              variant="temporary"
-              anchor="left"
-              open={mobileChatsSidebarOpen}
-              onOpen={(ev) => {}}
-              onClose={() => dispatch(closeMobileChatsSidebar())}
-              disableSwipeToOpen
-              classes={{
-                paper: clsx(classes.drawerPaper, 'absolute ltr:left-0 rtl:right-0'),
-              }}
-              style={{ position: 'absolute' }}
-              ModalProps={{
-                keepMounted: true,
-                disablePortal: true,
-                BackdropProps: {
-                  classes: {
-                    root: 'absolute',
-                  },
-                },
-              }}
-            >
-              <ChatsSidebar />
-            </SwipeableDrawer>
-          </Hidden>*/}
-          {/*<Hidden smDown>
-            <Drawer
-              className="h-full z-20"
-              variant="permanent"
-              open
-              classes={{
-                paper: classes.drawerPaper,
-              }}
-            >
-              <ChatsSidebar />
-            </Drawer>
-          </Hidden>*/}
-          <SwipeableDrawer
-            className="h-full absolute z-30"
-            variant="temporary"
-            anchor="left"
-            open={userSidebarOpen}
-            onOpen={(ev) => {}}
-            onClose={() => dispatch(closeUserSidebar())}
-            classes={{
-              paper: clsx(classes.drawerPaper, 'absolute left-0'),
-            }}
-            style={{ position: 'absolute' }}
-            ModalProps={{
-              keepMounted: false,
-              disablePortal: true,
-              BackdropProps: {
-                classes: {
-                  root: 'absolute',
-                },
-              },
-            }}
-          >
-            <UserSidebar />
-          </SwipeableDrawer>
-
           <main className={clsx(classes.contentWrapper, 'z-10')}>
             {!chat ? (
               <div className="flex flex-col flex-1 items-center justify-center p-24">
@@ -233,7 +171,7 @@ function ChatApp(props) {
                   className="hidden md:flex px-16 pb-24 text-16 text-center"
                   color="textSecondary"
                 >
-                  Select a contact to start a conversation!..
+                  Click a button to start a conversation!..
                 </Typography>
                 <Button
                   variant="outlined"
@@ -241,7 +179,7 @@ function ChatApp(props) {
                   className="flex md:hidden"
                   onClick={() => dispatch(openMobileChatsSidebar())}
                 >
-                  Select a contact to start a conversation!..
+                  Click a button to start a conversation!..
                 </Button>
               </div>
             ) : (
@@ -258,8 +196,6 @@ function ChatApp(props) {
                     </IconButton>
                     <div
                       className="flex items-center cursor-pointer"
-                      onClick={() => dispatch(openContactSidebar())}
-                      onKeyDown={() => dispatch(openContactSidebar())}
                       role="button"
                       tabIndex={0}
                     >
@@ -287,30 +223,6 @@ function ChatApp(props) {
               </>
             )}
           </main>
-
-          <SwipeableDrawer
-            className="h-full absolute z-30"
-            variant="temporary"
-            anchor="right"
-            open={contactSidebarOpen}
-            onOpen={(ev) => {}}
-            onClose={() => dispatch(closeContactSidebar())}
-            classes={{
-              paper: clsx(classes.drawerPaper, 'absolute ltr:right-0 rtl:left-0'),
-            }}
-            style={{ position: 'absolute' }}
-            ModalProps={{
-              keepMounted: true,
-              disablePortal: true,
-              BackdropProps: {
-                classes: {
-                  root: 'absolute',
-                },
-              },
-            }}
-          >
-            <ContactSidebar />
-          </SwipeableDrawer>
         </div>
       </div>
     </div>

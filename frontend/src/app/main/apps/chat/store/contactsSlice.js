@@ -3,7 +3,7 @@ import { createEntityAdapter, createSlice, createAsyncThunk } from '@reduxjs/too
 import axios from 'axios';
 
 export const getContacts = createAsyncThunk('chatApp/contacts/getContacts', async (params) => {
-  const response = await axios.get('/api/chat/contacts', { params });
+  const response = await axios.post('/api/chat/contacts', { params });
   const data = await response.data;
 
   return data;

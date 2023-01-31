@@ -39,7 +39,7 @@ const notesDB = {
 		{
 			id: '5739d1fb843f747d5dc0e42a',
 			title: '',
-			description: 'Theming support for Chat app',
+			description: 'Theming support for Rephrase app',
 			archive: false,
 			image: '',
 			time: '2018-03-21T23:23:53.587Z',

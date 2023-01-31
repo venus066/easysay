@@ -161,6 +161,8 @@ function Chat(props) {
             {chat.dialog.map((item, i) => {
               const contact =
                 item.who === user.id ? user : contacts.find((_contact) => _contact.id === item.who);
+              console.log('contacts: ', contacts);
+              console.log('contact: ', contact);
               return (
                 <div
                   key={item.time}

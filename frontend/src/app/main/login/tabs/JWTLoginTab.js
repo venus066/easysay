@@ -11,6 +11,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { submitLogin } from 'app/auth/store/loginSlice';
 import * as yup from 'yup';
 import _ from '@lodash';
+import history from '@history';
 
 /**
  * Form Validation Schema

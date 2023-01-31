@@ -1,4 +1,5 @@
-import '@fake-db';
+// import '@fake-db';
+import axios from 'axios';
 import FuseAuthorization from '@fuse/core/FuseAuthorization';
 import FuseLayout from '@fuse/core/FuseLayout';
 import FuseTheme from '@fuse/core/FuseTheme';
@@ -7,14 +8,13 @@ import { Router } from 'react-router-dom';
 import { SnackbarProvider } from 'notistack';
 import { Auth } from './auth';
 import withAppProviders from './withAppProviders';
-// import axios from 'axios';
 
 /**
  * Axios HTTP Request defaults
  */
-// axios.defaults.baseURL = "";
-// axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
-// axios.defaults.headers.common['Content-Type'] = 'application/x-www-form-urlencoded';
+axios.defaults.baseURL = "http://localhost:5000";
+axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
+axios.defaults.headers.common['Content-Type'] = 'application/x-www-form-urlencoded';
 
 const App = () => {
   return (

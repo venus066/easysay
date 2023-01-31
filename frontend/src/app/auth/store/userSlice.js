@@ -76,9 +76,8 @@ export const createUserSettingsFirebase = (authUser) => async (dispatch, getStat
 
 export const setUserData = (user) => async (dispatch, getState) => {
   /*
-        You can redirect the logged-in user to a specific route depending on his role
-         */
-
+  You can redirect the logged-in user to a specific route depending on his role
+   */
   history.location.state = {
     redirectUrl: user.redirectUrl, // for example 'apps/academy'
   };
@@ -86,8 +85,7 @@ export const setUserData = (user) => async (dispatch, getState) => {
   /*
     Set User Settings
      */
-  dispatch(setDefaultSettings(user.data.settings));
-
+  dispatch(setDefaultSettings({}));
   dispatch(setUser(user));
 };
 
@@ -122,11 +120,7 @@ export const logoutUser = () => async (dispatch, getState) => {
     // is guest
     return null;
   }
-
-  history.push({
-    pathname: '/',
-  });
-
+  
   switch (user.from) {
     case 'firebase': {
       firebaseService.signOut();
@@ -194,10 +188,10 @@ export const updateUserData = (user) => async (dispatch, getState) => {
 const initialState = {
   role: [], // guest
   data: {
-    displayName: 'John Doe',
-    photoURL: 'assets/images/avatars/Velazquez.jpg',
-    email: 'johndoe@withinpixels.com',
-    shortcuts: ['calendar', 'mail', 'contacts', 'todo'],
+    displayName: '',
+    photoURL: '',
+    email: '',
+    shortcuts: [],
   },
 };
 

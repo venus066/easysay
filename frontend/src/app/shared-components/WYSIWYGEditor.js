@@ -15,11 +15,13 @@ const useStyles = makeStyles({
   toolbar: {
     borderWidth: '0 0 1px 0!important',
     margin: '0!important',
+    display: 'none!important',
   },
   wrapper: {},
   editor: {
     padding: '8px 12px',
-    height: `${256}px!important`,
+    overflowX: 'hidden',
+    // height: `${256}px!important`,
   },
 });
 
@@ -38,13 +40,16 @@ const WYSIWYGEditor = forwardRef((props, ref) => {
     <div
       className={clsx(classes.root, 'rounded-4 border-1 overflow-hidden w-full', props.className)}
       ref={ref}
+      style={{ border: 'none' }}
     >
       <Editor
         editorState={editorState}
         toolbarClassName={classes.toolbar}
         wrapperClassName={classes.wrapper}
+        placeholder='Type in text'
         editorClassName={classes.editor}
         onEditorStateChange={onEditorStateChange}
+        editorStyle={{ overflowX: 'hidden' }}
       />
     </div>
   );

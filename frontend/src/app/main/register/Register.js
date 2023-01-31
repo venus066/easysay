@@ -64,7 +64,7 @@ function Register() {
               animate={{ opacity: 1, transition: { delay: 0.2 } }}
             >
               <div className="flex items-center justif-center mb-32">
-                <img className="logo-icon w-160" src="assets/images/logos/easyessay.png" alt="logo" />
+                <img className="logo-icon w-160" src="assets/images/logos/quickpen.png" alt="logo" />
               </div>
             </motion.div>
             {selectedTab === 0 && <JWTRegisterTab />}
@@ -96,7 +96,7 @@ function Register() {
             >
               <Typography variant="h3" color="inherit" className="font-semibold leading-tight">
                 Welcome <br />
-                to the <br /> EasyEssay!
+                to the <br /> QuickPen!
               </Typography>
             </motion.div>
 

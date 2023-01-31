@@ -8,6 +8,7 @@ import { bindActionCreators } from '@reduxjs/toolkit';
 import { hideMessage, showMessage } from 'app/store/fuse/messageSlice';
 
 import { setUserDataFirebase, setUserDataAuth0, setUserData, logoutUser } from './store/userSlice';
+import {loginError, loginSuccess} from "./store/loginSlice";
 
 class Auth extends Component {
   state = {
@@ -17,8 +18,8 @@ class Auth extends Component {
   componentDidMount() {
     return Promise.all([
       // Comment the lines which you do not use
-      this.firebaseCheck(),
-      this.auth0Check(),
+      // this.firebaseCheck(),
+      // this.auth0Check(),
       this.jwtCheck(),
     ]).then(() => {
       this.setState({ waitAuthCheck: false });
@@ -29,7 +30,6 @@ class Auth extends Component {
     new Promise((resolve) => {
       jwtService.on('onAutoLogin', () => {
         this.props.showMessage({ message: 'Logging in with JWT' });
-
         /**
          * Sign in and retrieve user data from Api
          */
@@ -37,14 +37,14 @@ class Auth extends Component {
           .signInWithToken()
           .then((user) => {
             this.props.setUserData(user);
-
+            this.props.loginSuccess();
             resolve();
 
             this.props.showMessage({ message: 'Logged in with JWT' });
           })
           .catch((error) => {
             this.props.showMessage({ message: error.message });
-
+            this.props.loginError();
             resolve();
           });
       });
@@ -145,6 +145,8 @@ function mapDispatchToProps(dispatch) {
       setUserDataFirebase,
       showMessage,
       hideMessage,
+      loginSuccess,
+      loginError,
     },
     dispatch
   );

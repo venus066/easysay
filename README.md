@@ -1,10 +1,10 @@
-# EasyEssay
+# QuickPen
 This is a simple web site for the students based on NodeJS using OpenAI
 
 ---
 
 ## Features
-- Chat with AI Bot 
+- Rephrase with AI Bot 
 - Make an article base on title sentence using Open AI
 - Rephrase a sentence
 - Integrate payment with Stripe

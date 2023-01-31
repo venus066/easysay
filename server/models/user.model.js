@@ -15,8 +15,9 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
-    phoneNumber: {
-      type: Number,
+    role: {
+      type: String,
+      required: true,
     },
   },
   { timestamps: true }

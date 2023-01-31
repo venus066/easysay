@@ -3,6 +3,7 @@ import * as authController from './auth.controller.js';
 
 export const loginUser = async function (req, res) {
   const data = req.body;
+  console.log(data);
   try {
     const schema = yup.object({
       email: yup
@@ -12,7 +13,7 @@ export const loginUser = async function (req, res) {
           tlds: { allow: ["com", "in"] },
         })
         .required(),
-      password: yup.string().min(3).max(50).required(),
+      password: yup.string().min(3).max(50).required()
     });
 
     await schema.validate(data);
@@ -35,12 +36,26 @@ export const registerUser = async function (req, res) {
         })
         .required(),
       password: yup.string().min(3).max(50).required(),
-      phoneNumber: yup.number(),
       displayName: yup.string().min(3).max(50),
     });
     console.log(req.body);
     await schema.validate(data);
     authController.registerUser(req, res);
+  } catch (e) {
+    console.log(e.message);
+    res.status(400).send({ error: "Bad Request", message: e.message });
+  }
+};
+
+export const accessToken = async function (req, res) {
+  const { data } = req.body;
+  console.log('access_token:', data);
+  try {
+    const schema = yup.object({
+      access_token: yup.string().required(),
+    });
+    await schema.validate(data);
+    authController.accessToken(req, res);
   } catch (e) {
     console.log(e.message);
     res.status(400).send({ error: "Bad Request", message: e.message });

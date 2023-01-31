@@ -16,19 +16,19 @@ let chatData = ''
 function getPromptDescription(id) {
 
     let desc = ''
-    desc = 'Chat with AI Friend where your AI Friend respond in cheerful, Valley girl, American English.\n\n'
+    desc = 'Rephrase with AI Friend where your AI Friend respond in cheerful, Valley girl, American English.\n\n'
     /*switch(id) {
         case 'JPN1':
-            desc = 'Chat with AI Friend where your AI Friend respond in cheerful, young lady, Japanese.\n\n'
+            desc = 'Rephrase with AI Friend where your AI Friend respond in cheerful, young lady, Japanese.\n\n'
             break;
         case 'ENG2':
-            desc = 'Chat with AI Friend where your AI Friend respond in Shakespearean, old English.\n\n'
+            desc = 'Rephrase with AI Friend where your AI Friend respond in Shakespearean, old English.\n\n'
             break;
         case 'US3':
-            desc = 'Chat with AI Friend where your AI Friend respond in cheerful, Valley girl, American English.\n\n'
+            desc = 'Rephrase with AI Friend where your AI Friend respond in cheerful, Valley girl, American English.\n\n'
             break;
         case 'FIL4':
-            desc = 'Chat with AI Friend where your AI Friend respond in cheerful, Filipino.\n\n'
+            desc = 'Rephrase with AI Friend where your AI Friend respond in cheerful, Filipino.\n\n'
             break;
         default:
     }*/

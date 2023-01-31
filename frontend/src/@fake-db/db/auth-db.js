@@ -49,10 +49,10 @@ const authDB = {
 						// navbar: 'defaultDark',
 						// toolbar: 'defaultDark',
 						// footer: 'defaultDark',
-						main: 'light12',
-						navbar: 'light12',
-						toolbar: 'light12',
-						footer: 'light12'
+						main: 'light5',
+						navbar: 'light5',
+						toolbar: 'light5',
+						footer: 'light5'
 					}
 				},
 				shortcuts: ['calendar', 'mail', 'contacts']
@@ -92,10 +92,10 @@ const authDB = {
 						// navbar: 'mainThemeDark',
 						// toolbar: 'mainThemeDark',
 						// footer: 'mainThemeDark',
-						main: 'light12',
-						navbar: 'light12',
-						toolbar: 'light12',
-						footer: 'light12'
+						main: 'light5',
+						navbar: 'light5',
+						toolbar: 'light5',
+						footer: 'light5'
 					}
 				},
 				shortcuts: ['calendar', 'mail', 'contacts', 'todo']
