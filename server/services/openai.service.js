@@ -91,3 +91,33 @@ export const getCompletion = async(message) => {
         text: reply,
     }
 }
+
+export const getRephrase = async(message) => {
+    let prompt = 'Generate 3 sentences with the same meaning of following sentence.\n';
+    prompt += message;
+    prompt += '\n';
+
+    console.log('prompt:', prompt);
+    // generate message
+    let reply = '';
+    try {
+        const completion = await OpenaiService.createCompletion({
+            model: "text-davinci-003",
+            prompt: prompt,
+            temperature: 0.5,
+            max_tokens: 2000,
+            top_p: 1,
+            frequency_penalty: 0.5,
+            presence_penalty: 0,
+        });
+        console.log(completion.data.choices[0].text.trim());
+        reply = completion.data.choices[0].text.trim();
+
+    } catch(error) {
+        console.log(error)
+    }
+
+    return {
+        text: reply,
+    }
+}

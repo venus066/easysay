@@ -103,7 +103,6 @@ function Chat(props) {
   const classes = useStyles(props);
   const chatRef = useRef(null);
   const [messageText, setMessageText] = useState('');
-  const [receiveText, setReceiveText] = useState('111');
 
   useEffect(() => {
     if (chat) {

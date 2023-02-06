@@ -1,36 +1,36 @@
-import FuseSearch from '@fuse/core/FuseSearch';
-import FuseShortcuts from '@fuse/core/FuseShortcuts';
 import AppBar from '@material-ui/core/AppBar';
 import Hidden from '@material-ui/core/Hidden';
-import { makeStyles, ThemeProvider } from '@material-ui/core/styles';
+import {makeStyles, ThemeProvider} from '@material-ui/core/styles';
 import Toolbar from '@material-ui/core/Toolbar';
-import ChatPanelToggleButton from 'app/fuse-layouts/shared-components/chatPanel/ChatPanelToggleButton';
 import NavbarToggleButton from 'app/fuse-layouts/shared-components/NavbarToggleButton';
-import QuickPanelToggleButton from 'app/fuse-layouts/shared-components/quickPanel/QuickPanelToggleButton';
 import UserMenu from 'app/fuse-layouts/shared-components/UserMenu';
 import clsx from 'clsx';
-import { memo } from 'react';
-import { useSelector } from 'react-redux';
-import { selectToolbarTheme } from 'app/store/fuse/settingsSlice';
-import AdjustFontSize from '../../shared-components/AdjustFontSize';
-import FullScreenToggle from '../../shared-components/FullScreenToggle';
-import LanguageSwitcher from '../../shared-components/LanguageSwitcher';
-import NotificationPanelToggleButton from '../../shared-components/notificationPanel/NotificationPanelToggleButton';
+import {memo} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
+import {selectToolbarTheme} from 'app/store/fuse/settingsSlice';
 import Tooltip from "@material-ui/core/Tooltip/Tooltip";
 import IconButton from "@material-ui/core/IconButton";
-import {motion} from "framer-motion";
 import Icon from "@material-ui/core/Icon";
 import {Link} from "react-router-dom";
+import {changeMode, showDialog} from "../../../shared-components/store/wysiwygSlice";
+import {getCandidates} from "../../../main/apps/rephrase/store/rephraseSlice";
 
 const useStyles = makeStyles((theme) => ({
   root: {},
 }));
 
 function ToolbarLayout2(props) {
+  const dispatch = useDispatch();
   const config = useSelector(({ fuse }) => fuse.settings.current.layout.config);
   const toolbarTheme = useSelector(selectToolbarTheme);
   const login = useSelector(({ auth }) => auth.login);
+
+  const wysiwygEditor = useSelector( ({ wysiwygEditor }) => wysiwygEditor);
   const classes = useStyles(props);
+
+  const onClickRephrase = (mode) => {
+    dispatch(changeMode(1));
+  }
 
   return (
     <ThemeProvider theme={toolbarTheme}>
@@ -58,7 +58,7 @@ function ToolbarLayout2(props) {
                 </IconButton>
               </Tooltip>
             </Link>
-            <Link to="/apps/rephrase" role="button">
+            <Link to="/apps/rephrase" role="button" onClick={onClickRephrase}>
               <Tooltip
                   title="Rephrase"
                   placement='bottom'

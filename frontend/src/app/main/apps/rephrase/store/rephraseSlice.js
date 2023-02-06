@@ -1,11 +1,14 @@
 import {createAsyncThunk, createEntityAdapter, createSlice} from '@reduxjs/toolkit';
-
 import axios from 'axios';
+import {showDialog} from "../../../../shared-components/store/wysiwygSlice";
 
-export const getCandidates = createAsyncThunk('rephraseApp/candidate/getCandidates', async (params) => {
+export const getCandidates = createAsyncThunk(
+    'rephraseApp/candidate/getCandidates',
+    async (params, {dispatch, getState}) => {
   try {
     const response = await axios.post('/api/rephrase/candidate', { params });
     const data = await response.data;
+
     return { data };
   } catch (e) {
     return console.log.error(e.message);
@@ -27,6 +30,7 @@ const rephraseSlice = createSlice({
   extraReducers: {
     [getCandidates.fulfilled]: (state, action) => {
       const { data } = action.payload;
+      console.log(data);
       candidateAdapter.setAll(state, data);
     },
   },

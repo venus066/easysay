@@ -3,6 +3,7 @@ import jwt from 'jsonwebtoken'
 import auth from './auth.js'
 import chat from './chat.js'
 import completion from './completion.js'
+import rephrase from './rephrase.js'
 
 const router = Router();
 
@@ -32,6 +33,7 @@ function jwtVerify(req, res, next) {
 }
 
 router.use('/completion', completion);
+router.use('/rephrase', rephrase);
 router.use('/auth', auth);
 router.use('/chat', chat);
 

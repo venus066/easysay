@@ -1,9 +1,7 @@
 import FuseScrollbars from '@fuse/core/FuseScrollbars';
 import {makeStyles} from '@material-ui/core/styles';
 import clsx from 'clsx';
-import {useEffect, useRef, useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-// import {selectRephrase} from './store/rephraseSlice';
 import {Controller, useForm} from "react-hook-form";
 import WYSIWYGEditor from "../../../shared-components/WYSIWYGEditor";
 
@@ -96,7 +94,6 @@ function Rephrase(props) {
 
   const {control } = useForm({
   });
-  console.log('control:', control);
 
   return (
       <div className={clsx('flex flex-col relative', props.className)}>
@@ -105,7 +102,7 @@ function Rephrase(props) {
           <div className="flex flex-col flex-1 items-center">
             <Controller
                 className=""
-                render={({ field }) => <WYSIWYGEditor {...field} />}
+                render={({ field: { ref, ...field } }) => <WYSIWYGEditor {...field} />}
                 name="message"
                 control={control}
             />

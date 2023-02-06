@@ -1,36 +1,23 @@
 import AppBar from '@material-ui/core/AppBar';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
-import Drawer from '@material-ui/core/Drawer';
-import Hidden from '@material-ui/core/Hidden';
 import Icon from '@material-ui/core/Icon';
 import IconButton from '@material-ui/core/IconButton';
 import Paper from '@material-ui/core/Paper';
-import { makeStyles } from '@material-ui/core/styles';
-import { alpha } from '@material-ui/core/styles/colorManipulator';
-import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
+import {makeStyles} from '@material-ui/core/styles';
+import {alpha} from '@material-ui/core/styles/colorManipulator';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import withReducer from 'app/store/withReducer';
 import clsx from 'clsx';
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import {useEffect} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
 import Chat from './Chat';
-import ChatsSidebar from './ChatsSidebar';
-import ContactSidebar from './ContactSidebar';
 import StatusIcon from './StatusIcon';
 import reducer from './store';
-import { getUserData } from './store/userSlice';
-import {selectContactById, getContacts, selectContacts} from './store/contactsSlice';
-import {
-  closeContactSidebar,
-  openContactSidebar,
-  openMobileChatsSidebar,
-  closeUserSidebar,
-  closeMobileChatsSidebar,
-} from './store/sidebarsSlice';
-
-import UserSidebar from './UserSidebar';
+import {getUserData} from './store/userSlice';
+import {getContacts, selectContactById, selectContacts} from './store/contactsSlice';
+import {openMobileChatsSidebar,} from './store/sidebarsSlice';
 import {getChat} from "./store/chatSlice";
 
 const drawerWidth = 400;
