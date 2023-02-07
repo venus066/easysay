@@ -1,15 +1,15 @@
 import NavLinkAdapter from '@fuse/core/NavLinkAdapter';
-import { Tooltip } from '@material-ui/core';
+import {Tooltip} from '@material-ui/core';
 import Icon from '@material-ui/core/Icon';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import { makeStyles } from '@material-ui/core/styles';
-import { alpha } from '@material-ui/core/styles/colorManipulator';
+import {makeStyles} from '@material-ui/core/styles';
+import {alpha} from '@material-ui/core/styles/colorManipulator';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import { useMemo } from 'react';
-import { useDispatch } from 'react-redux';
-import { useLocation } from 'react-router-dom';
+import {useMemo} from 'react';
+import {useDispatch} from 'react-redux';
+import {useLocation} from 'react-router-dom';
 import FuseNavBadge from '../../FuseNavBadge';
 
 const useStyles = makeStyles((theme) => ({

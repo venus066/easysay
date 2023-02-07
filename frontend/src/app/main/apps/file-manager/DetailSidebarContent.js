@@ -1,12 +1,12 @@
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Icon from '@material-ui/core/Icon';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import Switch from '@material-ui/core/Switch';
 import Typography from '@material-ui/core/Typography';
 import clsx from 'clsx';
-import { motion } from 'framer-motion';
-import { useSelector } from 'react-redux';
-import { selectFileById } from './store/filesSlice';
+import {motion} from 'framer-motion';
+import {useSelector} from 'react-redux';
+import {selectFileById} from './store/filesSlice';
 
 const useStyles = makeStyles({
   table: {

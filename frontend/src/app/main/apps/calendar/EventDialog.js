@@ -1,6 +1,6 @@
-import { yupResolver } from '@hookform/resolvers/yup';
+import {yupResolver} from '@hookform/resolvers/yup';
 import formatISO from 'date-fns/formatISO';
-import { Controller, useForm } from 'react-hook-form';
+import {Controller, useForm} from 'react-hook-form';
 import FuseUtils from '@fuse/utils/FuseUtils';
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
@@ -14,18 +14,12 @@ import Switch from '@material-ui/core/Switch';
 import TextField from '@material-ui/core/TextField';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import { DateTimePicker } from '@material-ui/pickers';
-import { useCallback, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import {DateTimePicker} from '@material-ui/pickers';
+import {useCallback, useEffect} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
 import * as yup from 'yup';
 import _ from '@lodash';
-import {
-  removeEvent,
-  updateEvent,
-  addEvent,
-  closeNewEventDialog,
-  closeEditEventDialog,
-} from './store/eventsSlice';
+import {addEvent, closeEditEventDialog, closeNewEventDialog, removeEvent, updateEvent,} from './store/eventsSlice';
 
 const defaultValues = {
   id: FuseUtils.generateGUID(),

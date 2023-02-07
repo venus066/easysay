@@ -1,18 +1,18 @@
 import NavLinkAdapter from '@fuse/core/NavLinkAdapter';
-import { useDebounce } from '@fuse/hooks';
+import {useDebounce} from '@fuse/hooks';
 import Grow from '@material-ui/core/Grow';
 import Icon from '@material-ui/core/Icon';
 import IconButton from '@material-ui/core/IconButton';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Paper from '@material-ui/core/Paper';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import {makeStyles, useTheme} from '@material-ui/core/styles';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import { memo, useState, useMemo } from 'react';
+import {memo, useMemo, useState} from 'react';
 import * as ReactDOM from 'react-dom';
-import { Manager, Popper, Reference } from 'react-popper';
-import { withRouter } from 'react-router-dom';
+import {Manager, Popper, Reference} from 'react-popper';
+import {withRouter} from 'react-router-dom';
 import FuseNavItem from '../../FuseNavItem';
 
 const useStyles = makeStyles((theme) => ({

@@ -2,7 +2,7 @@ import Drawer from '@material-ui/core/Drawer';
 import Hidden from '@material-ui/core/Hidden';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import clsx from 'clsx';
-import { forwardRef, useImperativeHandle, useState } from 'react';
+import {forwardRef, useImperativeHandle, useState} from 'react';
 import FusePageCardedSidebarContent from './FusePageCardedSidebarContent';
 
 function FusePageCardedSidebar(props, ref) {

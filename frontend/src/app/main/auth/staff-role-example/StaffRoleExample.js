@@ -2,10 +2,10 @@ import FuseHighlight from '@fuse/core/FuseHighlight';
 import FusePageSimple from '@fuse/core/FusePageSimple';
 import Button from '@material-ui/core/Button';
 import Icon from '@material-ui/core/Icon';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import { useDispatch } from 'react-redux';
-import { logoutUser } from 'app/auth/store/userSlice';
+import {useDispatch} from 'react-redux';
+import {logoutUser} from 'app/auth/store/userSlice';
 
 const useStyles = makeStyles((theme) => ({
   layoutRoot: {},

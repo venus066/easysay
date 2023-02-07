@@ -1,10 +1,10 @@
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import clsx from 'clsx';
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 
 const useStyles = makeStyles((theme) => ({
   header: {

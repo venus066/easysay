@@ -1,16 +1,16 @@
 import Hidden from '@material-ui/core/Hidden';
 import Icon from '@material-ui/core/Icon';
 import IconButton from '@material-ui/core/IconButton';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import clsx from 'clsx';
-import { motion } from 'framer-motion';
-import { useDispatch, useSelector } from 'react-redux';
-import { setSelectedItem, selectFiles } from './store/filesSlice';
+import {motion} from 'framer-motion';
+import {useDispatch, useSelector} from 'react-redux';
+import {selectFiles, setSelectedItem} from './store/filesSlice';
 
 const useStyles = makeStyles({
   typeIcon: {

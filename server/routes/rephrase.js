@@ -11,7 +11,7 @@ router.post('/candidate', async (req, res, next) => {
         console.log(response);
 
         res.status(200).send({
-            candidates: response.text
+            candidates: response
         })
     } catch (error) {
         // console.log(error);

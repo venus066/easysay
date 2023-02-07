@@ -4,9 +4,9 @@ import FuseAuthorization from '@fuse/core/FuseAuthorization';
 import FuseLayout from '@fuse/core/FuseLayout';
 import FuseTheme from '@fuse/core/FuseTheme';
 import history from '@history';
-import { Router } from 'react-router-dom';
-import { SnackbarProvider } from 'notistack';
-import { Auth } from './auth';
+import {Router} from 'react-router-dom';
+import {SnackbarProvider} from 'notistack';
+import {Auth} from './auth';
 import withAppProviders from './withAppProviders';
 
 /**

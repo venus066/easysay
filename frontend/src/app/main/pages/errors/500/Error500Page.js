@@ -1,6 +1,6 @@
 import Typography from '@material-ui/core/Typography';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import {motion} from 'framer-motion';
+import {Link} from 'react-router-dom';
 
 function Error500Page() {
   return (

@@ -1,13 +1,13 @@
 import Hidden from '@material-ui/core/Hidden';
-import { makeStyles, ThemeProvider } from '@material-ui/core/styles';
+import {makeStyles, ThemeProvider} from '@material-ui/core/styles';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import NavbarMobileLayout2 from 'app/fuse-layouts/layout2/components/NavbarMobileLayout2';
 import NavbarToggleFab from 'app/fuse-layouts/shared-components/NavbarToggleFab';
-import { navbarCloseMobile } from 'app/store/fuse/navbarSlice';
+import {navbarCloseMobile} from 'app/store/fuse/navbarSlice';
 import clsx from 'clsx';
-import { memo } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { selectNavbarTheme } from 'app/store/fuse/settingsSlice';
+import {memo} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
+import {selectNavbarTheme} from 'app/store/fuse/settingsSlice';
 import NavbarLayout2 from './NavbarLayout2';
 
 const navbarWidth = 280;

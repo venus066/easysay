@@ -1,9 +1,9 @@
 import FuseSplashScreen from '@fuse/core/FuseSplashScreen';
 import auth0Service from 'app/services/auth0Service';
-import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { setUserDataAuth0 } from 'app/auth/store/userSlice';
-import { showMessage } from 'app/store/fuse/messageSlice';
+import {useEffect} from 'react';
+import {useDispatch} from 'react-redux';
+import {setUserDataAuth0} from 'app/auth/store/userSlice';
+import {showMessage} from 'app/store/fuse/messageSlice';
 
 function Callback(props) {
   const dispatch = useDispatch();

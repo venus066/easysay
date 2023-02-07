@@ -1,16 +1,16 @@
 import FusePageSimple from '@fuse/core/FusePageSimple';
 import withReducer from 'app/store/withReducer';
-import { useRef } from 'react';
-import { useDispatch } from 'react-redux';
-import { useParams } from 'react-router-dom';
-import { useDeepCompareEffect } from '@fuse/hooks';
+import {useRef} from 'react';
+import {useDispatch} from 'react-redux';
+import {useParams} from 'react-router-dom';
+import {useDeepCompareEffect} from '@fuse/hooks';
 import ContactDialog from './ContactDialog';
 import ContactsHeader from './ContactsHeader';
 import ContactsList from './ContactsList';
 import ContactsSidebarContent from './ContactsSidebarContent';
 import reducer from './store';
-import { getContacts } from './store/contactsSlice';
-import { getUserData } from './store/userSlice';
+import {getContacts} from './store/contactsSlice';
+import {getUserData} from './store/userSlice';
 
 function ContactsApp(props) {
   const dispatch = useDispatch();

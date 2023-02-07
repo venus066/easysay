@@ -2,26 +2,20 @@ import FuseScrollbars from '@fuse/core/FuseScrollbars';
 import Icon from '@material-ui/core/Icon';
 import IconButton from '@material-ui/core/IconButton';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import withReducer from 'app/store/withReducer';
-import { useSnackbar } from 'notistack';
-import { useEffect, memo } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { useLocation } from 'react-router-dom';
+import {useSnackbar} from 'notistack';
+import {memo, useEffect} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
+import {useLocation} from 'react-router-dom';
 import clsx from 'clsx';
 import NotificationModel from './model/NotificationModel';
 import NotificationCard from './NotificationCard';
 import NotificationTemplate from './NotificationTemplate';
-import {
-  getNotifications,
-  addNotification,
-  dismissAll,
-  dismissItem,
-  selectNotifications,
-} from './store/dataSlice';
+import {addNotification, dismissAll, dismissItem, getNotifications, selectNotifications,} from './store/dataSlice';
 import reducer from './store';
-import { closeNotificationPanel, toggleNotificationPanel } from './store/stateSlice';
+import {closeNotificationPanel, toggleNotificationPanel} from './store/stateSlice';
 
 const useStyles = makeStyles((theme) => ({
   root: {

@@ -1,4 +1,4 @@
-import { amber } from '@material-ui/core/colors';
+import {amber} from '@material-ui/core/colors';
 import Divider from '@material-ui/core/Divider';
 import Icon from '@material-ui/core/Icon';
 import IconButton from '@material-ui/core/IconButton';
@@ -7,16 +7,16 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
-import { selectFlatNavigation } from 'app/store/fuse/navigationSlice';
+import {selectFlatNavigation} from 'app/store/fuse/navigationSlice';
 import clsx from 'clsx';
-import { motion } from 'framer-motion';
-import { memo, useRef, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { updateUserShortcuts } from 'app/auth/store/userSlice';
+import {motion} from 'framer-motion';
+import {memo, useRef, useState} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
+import {Link} from 'react-router-dom';
+import {updateUserShortcuts} from 'app/auth/store/userSlice';
 
 const useStyles = makeStyles({
   root: {

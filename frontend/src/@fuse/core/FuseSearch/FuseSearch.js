@@ -6,7 +6,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import MenuItem from '@material-ui/core/MenuItem';
 import Paper from '@material-ui/core/Paper';
 import Popper from '@material-ui/core/Popper';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
@@ -14,11 +14,11 @@ import match from 'autosuggest-highlight/match';
 import parse from 'autosuggest-highlight/parse';
 import clsx from 'clsx';
 import _ from '@lodash';
-import { memo, useEffect, useReducer, useRef } from 'react';
+import {memo, useEffect, useReducer, useRef} from 'react';
 import Autosuggest from 'react-autosuggest';
-import { useSelector } from 'react-redux';
-import { withRouter } from 'react-router-dom';
-import { selectFlatNavigation } from 'app/store/fuse/navigationSlice';
+import {useSelector} from 'react-redux';
+import {withRouter} from 'react-router-dom';
+import {selectFlatNavigation} from 'app/store/fuse/navigationSlice';
 
 function renderInputComponent(inputProps) {
   const { variant, classes, inputRef = () => {}, ref, ...other } = inputProps;

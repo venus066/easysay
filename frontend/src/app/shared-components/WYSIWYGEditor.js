@@ -1,5 +1,5 @@
 import {forwardRef, useEffect, useState} from 'react';
-import {convertToRaw, EditorState, SelectionState, getVisibleSelectionRect} from 'draft-js';
+import {convertToRaw, EditorState, getVisibleSelectionRect, Modifier, SelectionState} from 'draft-js';
 import {Editor} from 'react-draft-wysiwyg';
 import draftToHtml from 'draftjs-to-html';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
@@ -10,8 +10,7 @@ import {useDispatch, useSelector} from 'react-redux';
 import withReducer from 'app/store/withReducer';
 import reducer from './store';
 import {getCandidates} from "../main/apps/rephrase/store/rephraseSlice";
-import SimplePopover from "./Popover";
-import * as ReactDOM from "react-dom";
+import CustomDialog from "./CustomDialog";
 
 const useStyles = makeStyles({
   root: {
@@ -36,6 +35,7 @@ const useStyles = makeStyles({
 const WYSIWYGEditor = forwardRef((props, ref) => {
   const classes = useStyles();
   const dispatch = useDispatch();
+  const candidates = useSelector(({ rephraseApp }) => rephraseApp.rephrase.candidates);
 
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
   const [rephraseStart, setRephraseStart] = useState(0);
@@ -98,7 +98,7 @@ const WYSIWYGEditor = forwardRef((props, ref) => {
     dispatch(updateEditorState({sentence, selectedText, blockedText}));
   }, [mode]);
 
-  function getSentence(start, end, blockedText) {
+  const getSentence = (start, end, blockedText) => {
     let s_start = 0;
 
     // get start position of the sentence
@@ -125,7 +125,20 @@ const WYSIWYGEditor = forwardRef((props, ref) => {
     return { sentence, s_start, s_end };
   }
 
-  function onEditorStateChange(_editorState) {
+  const replaceText = (key) => {
+    const contentState = editorState.getCurrentContent();
+    const selectionState = editorState.getSelection();
+
+    const newContentState = Modifier.replaceText(contentState, selectionState, candidates[key]);
+    setEditorState(EditorState.push(
+      editorState,
+      newContentState,
+      'replace-text'
+    ));
+    // dispatch(rephraseText);
+  }
+
+  const onEditorStateChange = (_editorState) => {
     // get position of cursor
     let position = getVisibleSelectionRect(window);
     if (position) {
@@ -133,11 +146,14 @@ const WYSIWYGEditor = forwardRef((props, ref) => {
       setTop(position.top + position.height);
     }
 
+    if (isOpenDialog === true) {
+      return
+    }
+
     dispatch(changeMode(0));
     setEditorState(_editorState);
     return props.onChange(draftToHtml(convertToRaw(_editorState.getCurrentContent())));
   }
-
 
   return (
       <div
@@ -155,7 +171,9 @@ const WYSIWYGEditor = forwardRef((props, ref) => {
             onEditorStateChange={onEditorStateChange}
             editorStyle={{overflowX: 'hidden'}}
         />
-        <SimplePopover
+        <CustomDialog
+            onReplace={replaceText}
+            mode={mode}
             left={left}
             top={top} />
       </div>

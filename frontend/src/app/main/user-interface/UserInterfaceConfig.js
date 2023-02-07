@@ -1,4 +1,4 @@
-import { lazy } from 'react';
+import {lazy} from 'react';
 import cardedLayoutRoutes from './page-layouts/carded/cardedLayoutRoutes';
 import simpleLayoutRoutes from './page-layouts/simple/simpleLayoutRoutes';
 

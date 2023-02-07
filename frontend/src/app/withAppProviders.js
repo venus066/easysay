@@ -1,6 +1,6 @@
-import { createGenerateClassName, jssPreset, StylesProvider } from '@material-ui/core/styles';
-import { MuiPickersUtilsProvider } from '@material-ui/pickers';
-import { create } from 'jss';
+import {createGenerateClassName, jssPreset, StylesProvider} from '@material-ui/core/styles';
+import {MuiPickersUtilsProvider} from '@material-ui/pickers';
+import {create} from 'jss';
 import jssExtend from 'jss-plugin-extend';
 import rtl from 'jss-rtl';
 import Provider from 'react-redux/es/components/Provider';

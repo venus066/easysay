@@ -1,7 +1,7 @@
 import Divider from '@material-ui/core/Divider';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
-import { memo } from 'react';
+import {memo} from 'react';
 import _ from '@lodash';
 import FuseNavHorizontalLayout1 from './horizontal/FuseNavHorizontalLayout1';
 import FuseNavVerticalLayout1 from './vertical/FuseNavVerticalLayout1';
@@ -14,7 +14,7 @@ import FuseNavVerticalCollapse from './vertical/types/FuseNavVerticalCollapse';
 import FuseNavVerticalGroup from './vertical/types/FuseNavVerticalGroup';
 import FuseNavVerticalItem from './vertical/types/FuseNavVerticalItem';
 import FuseNavVerticalLink from './vertical/types/FuseNavVerticalLink';
-import { registerComponent } from './FuseNavItem';
+import {registerComponent} from './FuseNavItem';
 /*
 Register Fuse Navigation Components
  */

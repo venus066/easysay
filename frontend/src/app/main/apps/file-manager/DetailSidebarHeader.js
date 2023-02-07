@@ -1,9 +1,9 @@
 import Icon from '@material-ui/core/Icon';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import { motion } from 'framer-motion';
-import { useSelector } from 'react-redux';
-import { selectFileById } from './store/filesSlice';
+import {motion} from 'framer-motion';
+import {useSelector} from 'react-redux';
+import {selectFileById} from './store/filesSlice';
 
 function DetailSidebarHeader(props) {
   const selectedItem = useSelector((state) =>

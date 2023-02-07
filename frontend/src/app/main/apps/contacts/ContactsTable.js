@@ -1,4 +1,4 @@
-import { forwardRef, useRef, useEffect } from 'react';
+import {forwardRef, useEffect, useRef} from 'react';
 import Checkbox from '@material-ui/core/Checkbox';
 import Table from '@material-ui/core/Table';
 import PropTypes from 'prop-types';
@@ -9,7 +9,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
 import TableSortLabel from '@material-ui/core/TableSortLabel';
-import { useGlobalFilter, usePagination, useRowSelect, useSortBy, useTable } from 'react-table';
+import {useGlobalFilter, usePagination, useRowSelect, useSortBy, useTable} from 'react-table';
 import clsx from 'clsx';
 import ContactsTablePaginationActions from './ContactsTablePaginationActions';
 

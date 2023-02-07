@@ -1,12 +1,12 @@
-import { yupResolver } from '@hookform/resolvers/yup';
+import {yupResolver} from '@hookform/resolvers/yup';
 import Button from '@material-ui/core/Button';
 import Icon from '@material-ui/core/Icon';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import TextField from '@material-ui/core/TextField';
-import { useEffect, useRef, useState } from 'react';
-import { Controller, useForm } from 'react-hook-form';
-import { useDispatch, useSelector } from 'react-redux';
-import { registerWithFirebase } from 'app/auth/store/registerSlice';
+import {useEffect, useRef, useState} from 'react';
+import {Controller, useForm} from 'react-hook-form';
+import {useDispatch, useSelector} from 'react-redux';
+import {registerWithFirebase} from 'app/auth/store/registerSlice';
 import * as yup from 'yup';
 import _ from '@lodash';
 

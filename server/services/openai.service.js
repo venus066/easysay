@@ -10,12 +10,12 @@ const configuration = new Configuration({
 
 const OpenaiService = new OpenAIApi(configuration);
 
-let chatData = ''
+let chatData = '';
 
 // Prompt description
 function getPromptDescription(id) {
 
-    let desc = ''
+    let desc = '';
     desc = 'Chat with AI Friend where your AI Friend respond in cheerful, Valley girl, American English.\n\n'
     /*switch(id) {
         case 'JPN1':
@@ -60,7 +60,7 @@ export const getCompletion = async(message) => {
 
     }
 
-    let reply = ''
+    let reply = '';
     console.log('prompt:', prompt);
     // generate message
     try {
@@ -112,12 +112,18 @@ export const getRephrase = async(message) => {
         });
         console.log(completion.data.choices[0].text.trim());
         reply = completion.data.choices[0].text.trim();
-
+        // await sleep(200000);
     } catch(error) {
         console.log(error)
     }
 
-    return {
-        text: reply,
-    }
+    return reply;
+}
+
+function sleep(milliseconds) {
+    const date = Date.now();
+    let currentDate = null;
+    do {
+        currentDate = Date.now();
+    } while (currentDate - date < milliseconds);
 }

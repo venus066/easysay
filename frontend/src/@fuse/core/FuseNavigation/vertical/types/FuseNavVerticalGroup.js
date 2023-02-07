@@ -1,11 +1,11 @@
 import NavLinkAdapter from '@fuse/core/NavLinkAdapter';
 import ListSubheader from '@material-ui/core/ListSubheader';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { alpha } from '@material-ui/core/styles/colorManipulator';
+import {makeStyles, useTheme} from '@material-ui/core/styles';
+import {alpha} from '@material-ui/core/styles/colorManipulator';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import { useMemo } from 'react';
-import { useDispatch } from 'react-redux';
+import {useMemo} from 'react';
+import {useDispatch} from 'react-redux';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import FuseNavItem from '../../FuseNavItem';
 

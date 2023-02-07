@@ -7,8 +7,8 @@ import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import GoogleMap from 'google-map-react';
-import { useState } from 'react';
-import { useSelector } from 'react-redux';
+import {useState} from 'react';
+import {useSelector} from 'react-redux';
 import OrdersStatus from '../OrdersStatus';
 
 function Marker(props) {

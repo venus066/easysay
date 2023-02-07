@@ -1,6 +1,6 @@
 import Typography from '@material-ui/core/Typography';
-import { useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import {useSelector} from 'react-redux';
+import {Link} from 'react-router-dom';
 
 function ProductsTab() {
   const order = useSelector(({ eCommerceApp }) => eCommerceApp.order);

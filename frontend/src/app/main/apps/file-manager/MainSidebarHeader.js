@@ -1,6 +1,6 @@
 import Icon from '@material-ui/core/Icon';
 import Typography from '@material-ui/core/Typography';
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 
 function MainSidebarHeader() {
   return (

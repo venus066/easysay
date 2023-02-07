@@ -1,7 +1,7 @@
-import { createEntityAdapter, createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import {createAsyncThunk, createEntityAdapter, createSlice} from '@reduxjs/toolkit';
 
 import axios from 'axios';
-import { closeChatPanel } from './stateSlice';
+import {closeChatPanel} from './stateSlice';
 
 export const getContacts = createAsyncThunk('chatPanel/contacts/getContacts', async (params) => {
   const response = await axios.get('/api/chat/contacts', { params });

@@ -4,12 +4,12 @@ import Icon from '@material-ui/core/Icon';
 import IconButton from '@material-ui/core/IconButton';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import { makeStyles } from '@material-ui/core/styles';
-import { alpha } from '@material-ui/core/styles/colorManipulator';
+import {makeStyles} from '@material-ui/core/styles';
+import {alpha} from '@material-ui/core/styles/colorManipulator';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import { useEffect, useState, useMemo } from 'react';
-import { useLocation } from 'react-router-dom';
+import {useEffect, useMemo, useState} from 'react';
+import {useLocation} from 'react-router-dom';
 
 import FuseNavBadge from '../../FuseNavBadge';
 import FuseNavItem from '../../FuseNavItem';

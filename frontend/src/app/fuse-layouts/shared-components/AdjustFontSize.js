@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import {useState} from 'react';
 import Slider from '@material-ui/core/Slider';
 import Icon from '@material-ui/core/Icon';
 import IconButton from '@material-ui/core/IconButton';

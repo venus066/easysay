@@ -1,12 +1,12 @@
 import FuseNavigation from '@fuse/core/FuseNavigation';
-import { useTheme } from '@material-ui/core/styles';
+import {useTheme} from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import clsx from 'clsx';
-import { memo } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import {memo} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
 
-import { selectNavigation } from 'app/store/fuse/navigationSlice';
-import { navbarCloseMobile } from '../../store/fuse/navbarSlice';
+import {selectNavigation} from 'app/store/fuse/navigationSlice';
+import {navbarCloseMobile} from '../../store/fuse/navbarSlice';
 
 function Navigation(props) {
   const navigation = useSelector(selectNavigation);

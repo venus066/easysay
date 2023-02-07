@@ -1,19 +1,14 @@
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 import FuseUtils from '@fuse/utils';
 import Avatar from '@material-ui/core/Avatar';
 import Icon from '@material-ui/core/Icon';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import { useMemo, useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import {useEffect, useMemo, useState} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
 import ContactsMultiSelectMenu from './ContactsMultiSelectMenu';
 import ContactsTable from './ContactsTable';
-import {
-  openEditContactDialog,
-  removeContact,
-  toggleStarredContact,
-  selectContacts,
-} from './store/contactsSlice';
+import {openEditContactDialog, removeContact, selectContacts, toggleStarredContact,} from './store/contactsSlice';
 
 function ContactsList(props) {
   const dispatch = useDispatch();

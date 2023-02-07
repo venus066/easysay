@@ -11,19 +11,19 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Paper from '@material-ui/core/Paper';
-import { useTheme } from '@material-ui/core/styles';
+import {useTheme} from '@material-ui/core/styles';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import { motion } from 'framer-motion';
-import { useMemo, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import {motion} from 'framer-motion';
+import {useMemo, useState} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
 import ContactListItem from './ContactListItem';
 import StatusIcon from './StatusIcon';
-import { getChat } from './store/chatSlice';
-import { selectContacts } from './store/contactsSlice';
-import { openUserSidebar } from './store/sidebarsSlice';
-import { updateUserData } from './store/userSlice';
+import {getChat} from './store/chatSlice';
+import {selectContacts} from './store/contactsSlice';
+import {openUserSidebar} from './store/sidebarsSlice';
+import {updateUserData} from './store/userSlice';
 
 const statusArr = [
   {

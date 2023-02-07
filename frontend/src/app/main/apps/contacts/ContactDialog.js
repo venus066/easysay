@@ -1,5 +1,5 @@
 import FuseUtils from '@fuse/utils/FuseUtils';
-import { yupResolver } from '@hookform/resolvers/yup';
+import {yupResolver} from '@hookform/resolvers/yup';
 import AppBar from '@material-ui/core/AppBar';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
@@ -11,19 +11,19 @@ import IconButton from '@material-ui/core/IconButton';
 import TextField from '@material-ui/core/TextField';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import { useCallback, useEffect } from 'react';
-import { Controller, useForm } from 'react-hook-form';
-import { useDispatch, useSelector } from 'react-redux';
+import {useCallback, useEffect} from 'react';
+import {Controller, useForm} from 'react-hook-form';
+import {useDispatch, useSelector} from 'react-redux';
 
 import _ from '@lodash';
 import * as yup from 'yup';
 
 import {
-  removeContact,
-  updateContact,
-  addContact,
-  closeNewContactDialog,
-  closeEditContactDialog,
+    addContact,
+    closeEditContactDialog,
+    closeNewContactDialog,
+    removeContact,
+    updateContact,
 } from './store/contactsSlice';
 
 const defaultValues = {

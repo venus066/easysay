@@ -1,7 +1,7 @@
 import Button from '@material-ui/core/Button';
 import Icon from '@material-ui/core/Icon';
 import clsx from 'clsx';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 function DocumentationButton({ className }) {
   return (

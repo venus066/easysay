@@ -1,6 +1,6 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
 import axios from 'axios';
-import { showMessage } from 'app/store/fuse/messageSlice';
+import {showMessage} from 'app/store/fuse/messageSlice';
 
 export const getMail = createAsyncThunk('mailApp/mail/getMail', async (params) => {
   const response = await axios.get('/api/mail-app/mail', { params });

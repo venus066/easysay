@@ -1,7 +1,7 @@
-import { ThemeProvider } from '@material-ui/core/styles';
-import { memo, useEffect, useLayoutEffect } from 'react';
-import { useSelector } from 'react-redux';
-import { selectMainTheme } from 'app/store/fuse/settingsSlice';
+import {ThemeProvider} from '@material-ui/core/styles';
+import {memo, useEffect, useLayoutEffect} from 'react';
+import {useSelector} from 'react-redux';
+import {selectMainTheme} from 'app/store/fuse/settingsSlice';
 
 const useEnhancedEffect = typeof window === 'undefined' ? useEffect : useLayoutEffect;
 

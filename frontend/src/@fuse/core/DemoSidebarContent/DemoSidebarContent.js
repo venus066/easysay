@@ -2,7 +2,7 @@ import _ from '@lodash';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import { cloneElement, memo } from 'react';
+import {cloneElement, memo} from 'react';
 
 function DemoSidebarContent() {
   function generate(element) {

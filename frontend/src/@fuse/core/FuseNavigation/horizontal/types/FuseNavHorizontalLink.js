@@ -1,11 +1,11 @@
 import Icon from '@material-ui/core/Icon';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import { memo, useMemo } from 'react';
-import { withRouter } from 'react-router-dom';
+import {memo, useMemo} from 'react';
+import {withRouter} from 'react-router-dom';
 import FuseNavBadge from '../../FuseNavBadge';
 
 const useStyles = makeStyles((theme) => ({

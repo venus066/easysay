@@ -1,5 +1,5 @@
-import { useDebounce, usePrevious } from '@fuse/hooks';
-import { Controller, useForm } from 'react-hook-form';
+import {useDebounce, usePrevious} from '@fuse/hooks';
+import {Controller, useForm} from 'react-hook-form';
 import FuseLayoutConfigs from '@fuse/layouts/FuseLayoutConfigs';
 import _ from '@lodash';
 import TextField from '@material-ui/core/TextField';
@@ -10,14 +10,14 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import Select from '@material-ui/core/Select';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import Switch from '@material-ui/core/Switch';
 import Typography from '@material-ui/core/Typography';
 import clsx from 'clsx';
-import { useCallback, useMemo, memo, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { updateUserSettings } from 'app/auth/store/userSlice';
-import { setDefaultSettings } from 'app/store/fuse/settingsSlice';
+import {memo, useCallback, useEffect, useMemo} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
+import {updateUserSettings} from 'app/auth/store/userSlice';
+import {setDefaultSettings} from 'app/store/fuse/settingsSlice';
 
 const useStyles = makeStyles((theme) => ({
   root: {},

@@ -1,8 +1,8 @@
 import FusePageCarded from '@fuse/core/FusePageCarded';
 import withReducer from 'app/store/withReducer';
-import { useEffect, useRef } from 'react';
-import { useDispatch } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import {useEffect, useRef} from 'react';
+import {useDispatch} from 'react-redux';
+import {useParams} from 'react-router-dom';
 import MailDetails from './mail/MailDetails';
 import MailToolbar from './mail/MailToolbar';
 import MailAppHeader from './MailAppHeader';
@@ -11,9 +11,9 @@ import MailAppSidebarHeader from './MailAppSidebarHeader';
 import MailList from './mails/MailList';
 import MailsToolbar from './mails/MailsToolbar';
 import reducer from './store';
-import { getFilters } from './store/filtersSlice';
-import { getFolders } from './store/foldersSlice';
-import { getLabels } from './store/labelsSlice';
+import {getFilters} from './store/filtersSlice';
+import {getFolders} from './store/foldersSlice';
+import {getLabels} from './store/labelsSlice';
 
 function MailApp(props) {
   const dispatch = useDispatch();

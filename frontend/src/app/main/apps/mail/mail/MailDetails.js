@@ -4,14 +4,14 @@ import Divider from '@material-ui/core/Divider';
 import Icon from '@material-ui/core/Icon';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import { motion } from 'framer-motion';
-import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { withRouter, useParams } from 'react-router-dom';
-import { useDeepCompareEffect } from '@fuse/hooks';
+import {motion} from 'framer-motion';
+import {useState} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
+import {useParams, withRouter} from 'react-router-dom';
+import {useDeepCompareEffect} from '@fuse/hooks';
 import MailChip from '../MailChip';
-import { selectLabelsEntities } from '../store/labelsSlice';
-import { getMail } from '../store/mailSlice';
+import {selectLabelsEntities} from '../store/labelsSlice';
+import {getMail} from '../store/mailSlice';
 
 function MailDetails(props) {
   const dispatch = useDispatch();

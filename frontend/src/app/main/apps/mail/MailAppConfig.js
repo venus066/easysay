@@ -1,6 +1,6 @@
 import i18next from 'i18next';
-import { lazy } from 'react';
-import { Redirect } from 'react-router-dom';
+import {lazy} from 'react';
+import {Redirect} from 'react-router-dom';
 import ar from './i18n/ar';
 import en from './i18n/en';
 import tr from './i18n/tr';

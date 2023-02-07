@@ -1,7 +1,7 @@
-import { fuseDark } from '@fuse/colors';
+import {fuseDark} from '@fuse/colors';
 import _ from '@lodash';
-import { lightBlue, red } from '@material-ui/core/colors';
-import { createTheme } from '@material-ui/core/styles';
+import {lightBlue, red} from '@material-ui/core/colors';
+import {createTheme} from '@material-ui/core/styles';
 import qs from 'qs';
 
 /**

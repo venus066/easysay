@@ -1,8 +1,8 @@
 import FuseScrollbars from '@fuse/core/FuseScrollbars';
-import { useTheme, ThemeProvider } from '@material-ui/core/styles';
-import { selectContrastMainTheme } from 'app/store/fuse/settingsSlice';
+import {ThemeProvider, useTheme} from '@material-ui/core/styles';
+import {selectContrastMainTheme} from 'app/store/fuse/settingsSlice';
 import clsx from 'clsx';
-import { useSelector } from 'react-redux';
+import {useSelector} from 'react-redux';
 
 function FusePageCardedSidebarContent(props) {
   const theme = useTheme();

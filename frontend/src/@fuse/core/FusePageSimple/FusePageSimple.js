@@ -1,8 +1,8 @@
 import FuseScrollbars from '@fuse/core/FuseScrollbars';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import clsx from 'clsx';
 import * as PropTypes from 'prop-types';
-import { forwardRef, useImperativeHandle, memo, useRef } from 'react';
+import {forwardRef, memo, useImperativeHandle, useRef} from 'react';
 import FusePageSimpleHeader from './FusePageSimpleHeader';
 import FusePageSimpleSidebar from './FusePageSimpleSidebar';
 

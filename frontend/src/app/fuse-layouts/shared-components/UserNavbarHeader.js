@@ -1,9 +1,9 @@
 import AppBar from '@material-ui/core/AppBar';
 import Avatar from '@material-ui/core/Avatar';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import clsx from 'clsx';
-import { useSelector } from 'react-redux';
+import {useSelector} from 'react-redux';
 
 const useStyles = makeStyles((theme) => ({
   root: {

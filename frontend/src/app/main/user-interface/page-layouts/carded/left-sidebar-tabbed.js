@@ -4,10 +4,10 @@ import FusePageCarded from '@fuse/core/FusePageCarded';
 import Hidden from '@material-ui/core/Hidden';
 import Icon from '@material-ui/core/Icon';
 import IconButton from '@material-ui/core/IconButton';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import Tab from '@material-ui/core/Tab';
 import Tabs from '@material-ui/core/Tabs';
-import { useRef, useState } from 'react';
+import {useRef, useState} from 'react';
 
 const useStyles = makeStyles({
   layoutRoot: {},

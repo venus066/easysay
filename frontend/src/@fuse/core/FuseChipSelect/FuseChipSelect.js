@@ -1,12 +1,12 @@
 import Chip from '@material-ui/core/Chip';
 import MenuItem from '@material-ui/core/MenuItem';
 import Paper from '@material-ui/core/Paper';
-import { makeStyles } from '@material-ui/core/styles';
-import { emphasize } from '@material-ui/core/styles/colorManipulator';
+import {makeStyles} from '@material-ui/core/styles';
+import {emphasize} from '@material-ui/core/styles/colorManipulator';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 import clsx from 'clsx';
-import { memo } from 'react';
+import {memo} from 'react';
 import Select from 'react-select';
 import Creatable from 'react-select/creatable';
 

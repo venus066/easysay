@@ -3,8 +3,8 @@ import Checkbox from '@material-ui/core/Checkbox';
 import FormControl from '@material-ui/core/FormControl';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormHelperText from '@material-ui/core/FormHelperText';
-import { withFormsy } from 'formsy-react';
-import { memo } from 'react';
+import {withFormsy} from 'formsy-react';
+import {memo} from 'react';
 
 function CheckboxFormsy(props) {
   const importedProps = _.pick(props, [

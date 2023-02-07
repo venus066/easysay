@@ -1,13 +1,11 @@
 import Hidden from '@material-ui/core/Hidden';
 import Icon from '@material-ui/core/Icon';
 import IconButton from '@material-ui/core/IconButton';
-import Input from '@material-ui/core/Input';
-import Paper from '@material-ui/core/Paper';
-import { ThemeProvider } from '@material-ui/core/styles';
+import {ThemeProvider} from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import { motion } from 'framer-motion';
-import { useDispatch, useSelector } from 'react-redux';
-import { selectMainTheme } from 'app/store/fuse/settingsSlice';
+import {motion} from 'framer-motion';
+import {useDispatch, useSelector} from 'react-redux';
+import {selectMainTheme} from 'app/store/fuse/settingsSlice';
 import Button from "@material-ui/core/Button";
 
 function ContactsHeader(props) {

@@ -3,17 +3,17 @@ import Icon from '@material-ui/core/Icon';
 import IconButton from '@material-ui/core/IconButton';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
-import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { selectFolders } from '../store/foldersSlice';
-import { selectLabels } from '../store/labelsSlice';
+import {useState} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
+import {selectFolders} from '../store/foldersSlice';
+import {selectLabels} from '../store/labelsSlice';
 import {
-  toggleLabelOnSelectedMails,
-  setFolderOnSelectedMails,
-  selectMailsByParameter,
-  deselectAllMails,
-  selectAllMails,
-  selectMails,
+    deselectAllMails,
+    selectAllMails,
+    selectMails,
+    selectMailsByParameter,
+    setFolderOnSelectedMails,
+    toggleLabelOnSelectedMails,
 } from '../store/mailsSlice';
 
 function MailToolbar(props) {

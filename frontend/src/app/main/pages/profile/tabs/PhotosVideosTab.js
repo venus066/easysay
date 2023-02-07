@@ -6,8 +6,8 @@ import IconButton from '@material-ui/core/IconButton';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import Typography from '@material-ui/core/Typography';
 import axios from 'axios';
-import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import {motion} from 'framer-motion';
+import {useEffect, useState} from 'react';
 
 function PhotosVideosTab() {
   const [data, setData] = useState(null);

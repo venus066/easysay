@@ -1,7 +1,7 @@
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import { makeStyles } from '@material-ui/core/styles';
-import { darken } from '@material-ui/core/styles/colorManipulator';
+import {makeStyles} from '@material-ui/core/styles';
+import {darken} from '@material-ui/core/styles/colorManipulator';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -10,8 +10,8 @@ import TableRow from '@material-ui/core/TableRow';
 import Typography from '@material-ui/core/Typography';
 import axios from 'axios';
 import clsx from 'clsx';
-import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import {motion} from 'framer-motion';
+import {useEffect, useState} from 'react';
 
 const useStyles = makeStyles((theme) => ({
   root: {

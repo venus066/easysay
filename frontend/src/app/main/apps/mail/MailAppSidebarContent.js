@@ -4,14 +4,14 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListSubheader from '@material-ui/core/ListSubheader';
-import { makeStyles } from '@material-ui/core/styles';
-import { motion } from 'framer-motion';
-import { useTranslation } from 'react-i18next';
-import { useSelector } from 'react-redux';
+import {makeStyles} from '@material-ui/core/styles';
+import {motion} from 'framer-motion';
+import {useTranslation} from 'react-i18next';
+import {useSelector} from 'react-redux';
 import MailCompose from './MailCompose';
-import { selectFilters } from './store/filtersSlice';
-import { selectFolders } from './store/foldersSlice';
-import { selectLabels } from './store/labelsSlice';
+import {selectFilters} from './store/filtersSlice';
+import {selectFolders} from './store/foldersSlice';
+import {selectLabels} from './store/labelsSlice';
 
 const useStyles = makeStyles((theme) => ({
   listItem: {

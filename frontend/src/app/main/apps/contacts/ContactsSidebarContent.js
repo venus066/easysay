@@ -7,11 +7,11 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Paper from '@material-ui/core/Paper';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import { motion } from 'framer-motion';
-import { useDispatch, useSelector } from 'react-redux';
-import { openNewContactDialog } from './store/contactsSlice';
+import {motion} from 'framer-motion';
+import {useDispatch, useSelector} from 'react-redux';
+import {openNewContactDialog} from './store/contactsSlice';
 
 const useStyles = makeStyles((theme) => ({
   listItem: {

@@ -1,12 +1,12 @@
 import Icon from '@material-ui/core/Icon';
 import IconButton from '@material-ui/core/IconButton';
-import { makeStyles, ThemeProvider } from '@material-ui/core/styles';
+import {makeStyles, ThemeProvider} from '@material-ui/core/styles';
 import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
-import { selectMainThemeDark } from 'app/store/fuse/settingsSlice';
+import {selectMainThemeDark} from 'app/store/fuse/settingsSlice';
 import clsx from 'clsx';
-import { motion } from 'framer-motion';
-import { useSelector } from 'react-redux';
+import {motion} from 'framer-motion';
+import {useSelector} from 'react-redux';
 import format from 'date-fns/format';
 
 const useStyles = makeStyles((theme) => ({

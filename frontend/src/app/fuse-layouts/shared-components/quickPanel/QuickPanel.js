@@ -7,17 +7,17 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListSubheader from '@material-ui/core/ListSubheader';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import Switch from '@material-ui/core/Switch';
 import Typography from '@material-ui/core/Typography';
 import withReducer from 'app/store/withReducer';
 import format from 'date-fns/format';
-import { memo, useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import {memo, useEffect, useState} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
 import reducer from './store';
-import { getData } from './store/dataSlice';
-import { toggleQuickPanel } from './store/stateSlice';
+import {getData} from './store/dataSlice';
+import {toggleQuickPanel} from './store/stateSlice';
 
 const useStyles = makeStyles((theme) => ({
   root: {

@@ -1,16 +1,16 @@
 import FusePageSimple from '@fuse/core/FusePageSimple';
 import Button from '@material-ui/core/Button';
-import { blue, green } from '@material-ui/core/colors';
+import {blue, green} from '@material-ui/core/colors';
 import Icon from '@material-ui/core/Icon';
 import IconButton from '@material-ui/core/IconButton';
 import Input from '@material-ui/core/Input';
 import Paper from '@material-ui/core/Paper';
-import { makeStyles, ThemeProvider, useTheme } from '@material-ui/core/styles';
+import {makeStyles, ThemeProvider, useTheme} from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import axios from 'axios';
 import clsx from 'clsx';
-import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import {motion} from 'framer-motion';
+import {useEffect, useState} from 'react';
 
 const useStyles = makeStyles({
   title: {

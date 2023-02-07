@@ -1,5 +1,5 @@
 import List from '@material-ui/core/List';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import clsx from 'clsx';
 import FuseNavItem from '../FuseNavItem';
 

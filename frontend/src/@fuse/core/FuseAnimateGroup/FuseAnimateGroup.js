@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
-import { memo } from 'react';
-import { VelocityTransitionGroup } from 'velocity-react';
+import {memo} from 'react';
+import {VelocityTransitionGroup} from 'velocity-react';
 import 'velocity-animate/velocity.ui';
 
 const enterAnimationDefaults = {

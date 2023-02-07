@@ -1,4 +1,4 @@
-import { createEntityAdapter, createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import {createAsyncThunk, createEntityAdapter, createSlice} from '@reduxjs/toolkit';
 import axios from 'axios';
 import formatISO from 'date-fns/formatISO';
 

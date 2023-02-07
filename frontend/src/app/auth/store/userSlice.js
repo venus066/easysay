@@ -1,11 +1,11 @@
 /* eslint import/no-extraneous-dependencies: off */
-import { createSlice } from '@reduxjs/toolkit';
+import {createSlice} from '@reduxjs/toolkit';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import history from '@history';
 import _ from '@lodash';
-import { setInitialSettings, setDefaultSettings } from 'app/store/fuse/settingsSlice';
-import { showMessage } from 'app/store/fuse/messageSlice';
+import {setDefaultSettings, setInitialSettings} from 'app/store/fuse/settingsSlice';
+import {showMessage} from 'app/store/fuse/messageSlice';
 import auth0Service from 'app/services/auth0Service';
 import firebaseService from 'app/services/firebaseService';
 import jwtService from 'app/services/jwtService';
@@ -132,6 +132,9 @@ export const logoutUser = () => async (dispatch, getState) => {
     }
     default: {
       jwtService.logout();
+      history.push({
+        pathname: '/login',
+      });
     }
   }
 

@@ -1,4 +1,4 @@
-import { combineReducers } from '@reduxjs/toolkit';
+import {combineReducers} from '@reduxjs/toolkit';
 import chat from './chatSlice';
 import contacts from './contactsSlice';
 import state from './stateSlice';

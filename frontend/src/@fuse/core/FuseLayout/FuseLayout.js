@@ -1,14 +1,14 @@
-import { useDeepCompareEffect } from '@fuse/hooks';
+import {useDeepCompareEffect} from '@fuse/hooks';
 import FuseLayouts from '@fuse/layouts/FuseLayouts';
 import _ from '@lodash';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import AppContext from 'app/AppContext';
-import { generateSettings, setSettings } from 'app/store/fuse/settingsSlice';
-import { memo, useContext, useMemo, useCallback, useRef } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { matchRoutes } from 'react-router-config';
-import { useLocation } from 'react-router-dom';
-import { alpha } from '@material-ui/core/styles/colorManipulator';
+import {generateSettings, setSettings} from 'app/store/fuse/settingsSlice';
+import {memo, useCallback, useContext, useMemo, useRef} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
+import {matchRoutes} from 'react-router-config';
+import {useLocation} from 'react-router-dom';
+import {alpha} from '@material-ui/core/styles/colorManipulator';
 
 const useStyles = makeStyles((theme) => ({
   '@global': {

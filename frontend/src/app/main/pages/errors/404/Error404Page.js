@@ -2,8 +2,8 @@ import Icon from '@material-ui/core/Icon';
 import Input from '@material-ui/core/Input';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import {motion} from 'framer-motion';
+import {Link} from 'react-router-dom';
 
 function Error404Page() {
   return (

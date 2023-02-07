@@ -1,15 +1,9 @@
-import {
-  createGenerateClassName,
-  jssPreset,
-  StylesProvider,
-  ThemeProvider,
-  withStyles,
-} from '@material-ui/core/styles';
+import {createGenerateClassName, jssPreset, StylesProvider, ThemeProvider, withStyles,} from '@material-ui/core/styles';
 import clsx from 'clsx';
-import { create } from 'jss';
+import {create} from 'jss';
 import jssExtend from 'jss-plugin-extend';
 import PropTypes from 'prop-types';
-import { cloneElement, Component } from 'react';
+import {cloneElement, Component} from 'react';
 import Frame from 'react-frame-component';
 
 const styles = (theme) => ({

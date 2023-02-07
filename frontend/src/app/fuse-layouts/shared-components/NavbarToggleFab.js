@@ -1,12 +1,12 @@
 import Fab from '@material-ui/core/Fab';
 import Icon from '@material-ui/core/Icon';
-import { useTheme, makeStyles } from '@material-ui/core/styles';
+import {makeStyles, useTheme} from '@material-ui/core/styles';
 
 import Tooltip from '@material-ui/core/Tooltip';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import { navbarToggle, navbarToggleMobile } from 'app/store/fuse/navbarSlice';
+import {navbarToggle, navbarToggleMobile} from 'app/store/fuse/navbarSlice';
 import clsx from 'clsx';
-import { useDispatch, useSelector } from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 
 const useStyles = makeStyles((theme) => ({
   buttonIcon: {

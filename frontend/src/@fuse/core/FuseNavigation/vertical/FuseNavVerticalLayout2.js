@@ -1,5 +1,5 @@
 import List from '@material-ui/core/List';
-import { useTheme, makeStyles } from '@material-ui/core/styles';
+import {makeStyles, useTheme} from '@material-ui/core/styles';
 import clsx from 'clsx';
 import FuseNavVerticalTab from './types/FuseNavVerticalTab';
 

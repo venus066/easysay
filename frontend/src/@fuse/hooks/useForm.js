@@ -1,5 +1,5 @@
 import _ from '@lodash';
-import { useCallback, useState } from 'react';
+import {useCallback, useState} from 'react';
 
 function useForm(initialState, onSubmit) {
   const [form, setForm] = useState(initialState);

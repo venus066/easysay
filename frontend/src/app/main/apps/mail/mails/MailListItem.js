@@ -2,14 +2,14 @@ import _ from '@lodash';
 import Avatar from '@material-ui/core/Avatar';
 import Checkbox from '@material-ui/core/Checkbox';
 import ListItem from '@material-ui/core/ListItem';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import clsx from 'clsx';
-import { useDispatch, useSelector } from 'react-redux';
-import { withRouter, useParams } from 'react-router-dom';
+import {useDispatch, useSelector} from 'react-redux';
+import {useParams, withRouter} from 'react-router-dom';
 import MailChip from '../MailChip';
-import { toggleInSelectedMails } from '../store/mailsSlice';
-import { selectLabelsEntities } from '../store/labelsSlice';
+import {toggleInSelectedMails} from '../store/mailsSlice';
+import {selectLabelsEntities} from '../store/labelsSlice';
 
 const pathToRegexp = require('path-to-regexp');
 

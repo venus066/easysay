@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import {createSlice} from '@reduxjs/toolkit';
 
 const wysiwygSlice = createSlice({
   name: 'wysiwyg',
@@ -8,6 +8,7 @@ const wysiwygSlice = createSlice({
     blockedText: '',
     sentence: '',
     isOpenDialog: false,
+    isLoading: false,
   },
   reducers: {
     updateEditorState: {
@@ -18,21 +19,30 @@ const wysiwygSlice = createSlice({
         };
       },
     },
-    rephraseSentence: {
-      reducer: (state, action) => {
-        state.updateSentence = action.payload;
-      },
-    },
     changeMode: {
       reducer: (state, action) => {
-        state.mode = action.payload;
+        return {
+          ...state,
+          mode: action.payload,
+        };
       },
     },
     showDialog: {
       reducer: (state, action) => {
-        state.isOpenDialog = action.payload;
+        return {
+          ...state,
+          isOpenDialog: action.payload,
+        };
       },
     },
+    showProgress: {
+      reducer: (state, action) => {
+        return {
+          ...state,
+          isLoading: action.payload,
+        };
+      },
+    }
   },
   extraReducers: {
   }
@@ -42,7 +52,7 @@ export const {
   updateEditorState,
   changeMode,
   showDialog,
-  rephraseSentence,
+  showProgress,
 } = wysiwygSlice.actions;
 
 export default wysiwygSlice.reducer;

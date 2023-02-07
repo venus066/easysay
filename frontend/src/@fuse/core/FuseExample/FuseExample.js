@@ -6,7 +6,7 @@ import Tab from '@material-ui/core/Tab';
 import Tabs from '@material-ui/core/Tabs';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import { useState } from 'react';
+import {useState} from 'react';
 import DemoFrame from './DemoFrame';
 
 const propTypes = {

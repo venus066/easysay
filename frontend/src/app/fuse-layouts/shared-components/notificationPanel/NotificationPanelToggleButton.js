@@ -1,12 +1,12 @@
 import Badge from '@material-ui/core/Badge';
 import Icon from '@material-ui/core/Icon';
 import IconButton from '@material-ui/core/IconButton';
-import { useSelector, useDispatch } from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import withReducer from 'app/store/withReducer';
 import reducer from './store';
 
-import { selectNotifications } from './store/dataSlice';
-import { toggleNotificationPanel } from './store/stateSlice';
+import {selectNotifications} from './store/dataSlice';
+import {toggleNotificationPanel} from './store/stateSlice';
 
 function NotificationPanelToggleButton(props) {
   const notifications = useSelector(selectNotifications);

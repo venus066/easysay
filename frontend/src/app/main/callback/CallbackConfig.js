@@ -1,4 +1,4 @@
-import { authRoles } from 'app/auth';
+import {authRoles} from 'app/auth';
 import Callback from './Callback';
 
 const CallbackConfig = {

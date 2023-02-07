@@ -2,15 +2,15 @@ import FuseScrollbars from '@fuse/core/FuseScrollbars';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import Tooltip from '@material-ui/core/Tooltip';
 import clsx from 'clsx';
-import { motion } from 'framer-motion';
-import { memo, useRef } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { getChat } from './store/chatSlice';
-import { selectContacts } from './store/contactsSlice';
-import { openChatPanel } from './store/stateSlice';
+import {motion} from 'framer-motion';
+import {memo, useRef} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
+import {getChat} from './store/chatSlice';
+import {selectContacts} from './store/contactsSlice';
+import {openChatPanel} from './store/stateSlice';
 
 const useStyles = makeStyles((theme) => ({
   root: {

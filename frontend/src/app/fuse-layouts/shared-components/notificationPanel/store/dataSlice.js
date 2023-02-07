@@ -1,4 +1,4 @@
-import { createEntityAdapter, createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import {createAsyncThunk, createEntityAdapter, createSlice} from '@reduxjs/toolkit';
 import axios from 'axios';
 
 export const getNotifications = createAsyncThunk('notificationPanel/data/getData', async () => {

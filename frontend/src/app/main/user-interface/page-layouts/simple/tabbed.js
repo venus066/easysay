@@ -1,10 +1,10 @@
 import DemoContent from '@fuse/core/DemoContent';
 import FusePageSimple from '@fuse/core/FusePageSimple';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 
 import Tab from '@material-ui/core/Tab';
 import Tabs from '@material-ui/core/Tabs';
-import { useState } from 'react';
+import {useState} from 'react';
 
 const useStyles = makeStyles({
   layoutRoot: {},

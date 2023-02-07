@@ -1,9 +1,9 @@
-import { orange } from '@material-ui/core/colors';
+import {orange} from '@material-ui/core/colors';
 import Icon from '@material-ui/core/Icon';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import clsx from 'clsx';
 import FuseUtils from '@fuse/utils';
-import { Controller, useFormContext } from 'react-hook-form';
+import {Controller, useFormContext} from 'react-hook-form';
 
 const useStyles = makeStyles((theme) => ({
   productImageFeaturedStar: {

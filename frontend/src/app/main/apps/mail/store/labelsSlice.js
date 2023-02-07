@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk, createEntityAdapter } from '@reduxjs/toolkit';
+import {createAsyncThunk, createEntityAdapter, createSlice} from '@reduxjs/toolkit';
 import axios from 'axios';
 
 export const getLabels = createAsyncThunk('mailApp/labels/getLabels', async () => {

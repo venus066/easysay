@@ -1,17 +1,17 @@
 import FuseScrollbars from '@fuse/core/FuseScrollbars';
 import FuseSettings from '@fuse/core/FuseSettings';
 import Button from '@material-ui/core/Button';
-import { red } from '@material-ui/core/colors';
+import {red} from '@material-ui/core/colors';
 import Dialog from '@material-ui/core/Dialog';
 import Icon from '@material-ui/core/Icon';
 import IconButton from '@material-ui/core/IconButton';
 import Slide from '@material-ui/core/Slide';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import {makeStyles, useTheme} from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import clsx from 'clsx';
-import { forwardRef, memo, useState } from 'react';
+import {forwardRef, memo, useState} from 'react';
 import FuseThemeSchemes from '@fuse/core/FuseThemeSchemes';
-import { useSwipeable } from 'react-swipeable';
+import {useSwipeable} from 'react-swipeable';
 
 const Transition = forwardRef(function Transition(props, ref) {
   const theme = useTheme();

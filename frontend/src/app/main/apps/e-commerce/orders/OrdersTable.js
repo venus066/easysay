@@ -8,13 +8,13 @@ import TableCell from '@material-ui/core/TableCell';
 import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
 import Typography from '@material-ui/core/Typography';
-import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { withRouter } from 'react-router-dom';
+import {motion} from 'framer-motion';
+import {useEffect, useState} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
+import {withRouter} from 'react-router-dom';
 import FuseLoading from '@fuse/core/FuseLoading';
 import OrdersStatus from '../order/OrdersStatus';
-import { selectOrders, getOrders } from '../store/ordersSlice';
+import {getOrders, selectOrders} from '../store/ordersSlice';
 import OrdersTableHead from './OrdersTableHead';
 
 function OrdersTable(props) {

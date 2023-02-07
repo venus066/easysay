@@ -1,14 +1,14 @@
-import { amber, blue, green } from '@material-ui/core/colors';
+import {amber, blue, green} from '@material-ui/core/colors';
 import Icon from '@material-ui/core/Icon';
 import IconButton from '@material-ui/core/IconButton';
 import Snackbar from '@material-ui/core/Snackbar';
 import SnackbarContent from '@material-ui/core/SnackbarContent';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import clsx from 'clsx';
-import { memo } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { hideMessage } from 'app/store/fuse/messageSlice';
+import {memo} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
+import {hideMessage} from 'app/store/fuse/messageSlice';
 
 const useStyles = makeStyles((theme) => ({
   root: {},

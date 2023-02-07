@@ -4,11 +4,11 @@ import Hidden from '@material-ui/core/Hidden';
 import Icon from '@material-ui/core/Icon';
 import IconButton from '@material-ui/core/IconButton';
 import Paper from '@material-ui/core/Paper';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import Tooltip from '@material-ui/core/Tooltip';
 import clsx from 'clsx';
-import { memo, useState } from 'react';
+import {memo, useState} from 'react';
 
 const useStyles = makeStyles((theme) => ({
   paper: {

@@ -6,8 +6,8 @@ import Input from '@material-ui/core/Input';
 import InputLabel from '@material-ui/core/InputLabel';
 import OutlinedInput from '@material-ui/core/OutlinedInput';
 import Select from '@material-ui/core/Select';
-import { withFormsy } from 'formsy-react';
-import { memo } from 'react';
+import {withFormsy} from 'formsy-react';
+import {memo} from 'react';
 
 function SelectFormsy(props) {
   const importedProps = _.pick(props, [

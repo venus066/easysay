@@ -1,6 +1,6 @@
 import FuseLoading from '@fuse/core/FuseLoading';
 import PropTypes from 'prop-types';
-import { Suspense } from 'react';
+import {Suspense} from 'react';
 
 /**
  * React Suspense defaults

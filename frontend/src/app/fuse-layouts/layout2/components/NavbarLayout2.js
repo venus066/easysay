@@ -1,8 +1,8 @@
 import FuseScrollbars from '@fuse/core/FuseScrollbars';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import Logo from 'app/fuse-layouts/shared-components/Logo';
 import clsx from 'clsx';
-import { memo } from 'react';
+import {memo} from 'react';
 import Button from "@material-ui/core/Button";
 import {Link} from "react-router-dom";
 import {useSelector} from "react-redux";

@@ -1,4 +1,4 @@
-import { authRoles } from 'app/auth';
+import {authRoles} from 'app/auth';
 import StaffRoleExample from './StaffRoleExample';
 
 const StaffRoleExampleConfig = {

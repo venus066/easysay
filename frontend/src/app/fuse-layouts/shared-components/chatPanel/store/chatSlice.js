@@ -1,8 +1,8 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
 import axios from 'axios';
-import { setSelectedContactId } from './contactsSlice';
-import { closeChatPanel } from './stateSlice';
-import { updateUserChatList } from './userSlice';
+import {setSelectedContactId} from './contactsSlice';
+import {closeChatPanel} from './stateSlice';
+import {updateUserChatList} from './userSlice';
 
 export const getChat = createAsyncThunk(
   'chatPanel/chat/getChat',

@@ -1,4 +1,4 @@
-import { authRoles } from 'app/auth';
+import {authRoles} from 'app/auth';
 import AdminRoleExample from './AdminRoleExample';
 
 const AdminRoleExampleConfig = {

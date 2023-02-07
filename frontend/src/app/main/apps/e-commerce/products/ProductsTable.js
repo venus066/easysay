@@ -9,13 +9,13 @@ import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
 import Typography from '@material-ui/core/Typography';
 import clsx from 'clsx';
-import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import {motion} from 'framer-motion';
+import {useEffect, useState} from 'react';
 
-import { useDispatch, useSelector } from 'react-redux';
-import { withRouter } from 'react-router-dom';
+import {useDispatch, useSelector} from 'react-redux';
+import {withRouter} from 'react-router-dom';
 import FuseLoading from '@fuse/core/FuseLoading';
-import { getProducts, selectProducts } from '../store/productsSlice';
+import {getProducts, selectProducts} from '../store/productsSlice';
 import ProductsTableHead from './ProductsTableHead';
 
 function ProductsTable(props) {

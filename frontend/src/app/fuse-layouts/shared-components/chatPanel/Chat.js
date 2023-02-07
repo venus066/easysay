@@ -3,15 +3,15 @@ import Avatar from '@material-ui/core/Avatar';
 import Icon from '@material-ui/core/Icon';
 import IconButton from '@material-ui/core/IconButton';
 import Paper from '@material-ui/core/Paper';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 import clsx from 'clsx';
 import formatDistanceToNow from 'date-fns/formatDistanceToNow';
-import { useEffect, useMemo, useRef, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { sendMessage } from './store/chatSlice';
-import { selectContacts } from './store/contactsSlice';
+import {useEffect, useMemo, useRef, useState} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
+import {sendMessage} from './store/chatSlice';
+import {selectContacts} from './store/contactsSlice';
 
 const useStyles = makeStyles((theme) => ({
   root: {

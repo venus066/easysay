@@ -1,17 +1,16 @@
-import { yupResolver } from '@hookform/resolvers/yup';
+import {yupResolver} from '@hookform/resolvers/yup';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Icon from '@material-ui/core/Icon';
 import IconButton from '@material-ui/core/IconButton';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import Typography from '@material-ui/core/Typography';
-import { useEffect, useState } from 'react';
-import { Controller, useForm } from 'react-hook-form';
-import { useDispatch, useSelector } from 'react-redux';
-import { submitLogin } from 'app/auth/store/loginSlice';
+import {useEffect, useState} from 'react';
+import {Controller, useForm} from 'react-hook-form';
+import {useDispatch, useSelector} from 'react-redux';
+import {submitLogin} from 'app/auth/store/loginSlice';
 import * as yup from 'yup';
 import _ from '@lodash';
-import history from '@history';
 
 /**
  * Form Validation Schema

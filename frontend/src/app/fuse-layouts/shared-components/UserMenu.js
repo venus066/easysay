@@ -6,10 +6,10 @@ import ListItemText from '@material-ui/core/ListItemText';
 import MenuItem from '@material-ui/core/MenuItem';
 import Popover from '@material-ui/core/Popover';
 import Typography from '@material-ui/core/Typography';
-import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { logoutUser } from 'app/auth/store/userSlice';
+import {useState} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
+import {Link} from 'react-router-dom';
+import {logoutUser} from 'app/auth/store/userSlice';
 
 function UserMenu(props) {
   const dispatch = useDispatch();

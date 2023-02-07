@@ -1,13 +1,13 @@
 import Button from '@material-ui/core/Button';
 import Icon from '@material-ui/core/Icon';
-import { useTheme } from '@material-ui/core/styles';
+import {useTheme} from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import { motion } from 'framer-motion';
-import { useFormContext } from 'react-hook-form';
-import { useDispatch } from 'react-redux';
-import { Link, useHistory } from 'react-router-dom';
+import {motion} from 'framer-motion';
+import {useFormContext} from 'react-hook-form';
+import {useDispatch} from 'react-redux';
+import {Link, useHistory} from 'react-router-dom';
 import _ from '@lodash';
-import { saveProduct, removeProduct } from '../store/productSlice';
+import {removeProduct, saveProduct} from '../store/productSlice';
 
 function ProductHeader(props) {
   const dispatch = useDispatch();

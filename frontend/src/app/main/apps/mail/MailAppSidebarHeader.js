@@ -2,10 +2,10 @@ import Icon from '@material-ui/core/Icon';
 import MenuItem from '@material-ui/core/MenuItem';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
-import { motion } from 'framer-motion';
-import { useState } from 'react';
+import {motion} from 'framer-motion';
+import {useState} from 'react';
 
-import { useTranslation } from 'react-i18next';
+import {useTranslation} from 'react-i18next';
 
 const accounts = {
   creapond: 'johndoe@creapond.com',

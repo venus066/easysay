@@ -1,6 +1,6 @@
-import { createSlice, createAsyncThunk, createEntityAdapter } from '@reduxjs/toolkit';
+import {createAsyncThunk, createEntityAdapter, createSlice} from '@reduxjs/toolkit';
 import axios from 'axios';
-import { getUserData } from './userSlice';
+import {getUserData} from './userSlice';
 
 export const getContacts = createAsyncThunk(
   'contactsApp/contacts/getContacts',

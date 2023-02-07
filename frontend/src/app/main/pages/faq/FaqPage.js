@@ -5,12 +5,12 @@ import AccordionSummary from '@material-ui/core/AccordionSummary';
 import Icon from '@material-ui/core/Icon';
 import Input from '@material-ui/core/Input';
 import Paper from '@material-ui/core/Paper';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import axios from 'axios';
 import clsx from 'clsx';
-import { motion } from 'framer-motion';
-import { useEffect, useMemo, useState } from 'react';
+import {motion} from 'framer-motion';
+import {useEffect, useMemo, useState} from 'react';
 
 const useStyles = makeStyles((theme) => ({
   header: {

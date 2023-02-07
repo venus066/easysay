@@ -12,8 +12,7 @@ import Tooltip from "@material-ui/core/Tooltip/Tooltip";
 import IconButton from "@material-ui/core/IconButton";
 import Icon from "@material-ui/core/Icon";
 import {Link} from "react-router-dom";
-import {changeMode, showDialog} from "../../../shared-components/store/wysiwygSlice";
-import {getCandidates} from "../../../main/apps/rephrase/store/rephraseSlice";
+import {changeMode} from "../../../shared-components/store/wysiwygSlice";
 
 const useStyles = makeStyles((theme) => ({
   root: {},

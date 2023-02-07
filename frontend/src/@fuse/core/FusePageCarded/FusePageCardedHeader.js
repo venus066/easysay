@@ -1,6 +1,6 @@
-import { useTheme, ThemeProvider } from '@material-ui/core/styles';
-import { selectContrastMainTheme } from 'app/store/fuse/settingsSlice';
-import { useSelector } from 'react-redux';
+import {ThemeProvider, useTheme} from '@material-ui/core/styles';
+import {selectContrastMainTheme} from 'app/store/fuse/settingsSlice';
+import {useSelector} from 'react-redux';
 
 function FusePageCardedHeader(props) {
   const theme = useTheme();

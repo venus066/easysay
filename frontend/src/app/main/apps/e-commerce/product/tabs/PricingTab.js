@@ -1,6 +1,6 @@
 import InputAdornment from '@material-ui/core/InputAdornment';
 import TextField from '@material-ui/core/TextField';
-import { Controller, useFormContext } from 'react-hook-form';
+import {Controller, useFormContext} from 'react-hook-form';
 
 function PricingTab(props) {
   const methods = useFormContext();

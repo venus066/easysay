@@ -1,11 +1,11 @@
 import Icon from '@material-ui/core/Icon';
 import IconButton from '@material-ui/core/IconButton';
-import { useTheme } from '@material-ui/core/styles';
+import {useTheme} from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import { useDispatch, useSelector } from 'react-redux';
-import { setDefaultSettings } from 'app/store/fuse/settingsSlice';
+import {useDispatch, useSelector} from 'react-redux';
+import {setDefaultSettings} from 'app/store/fuse/settingsSlice';
 import _ from '@lodash';
-import { navbarToggleMobile, navbarToggle } from '../../store/fuse/navbarSlice';
+import {navbarToggle, navbarToggleMobile} from '../../store/fuse/navbarSlice';
 
 function NavbarToggleButton(props) {
   const dispatch = useDispatch();

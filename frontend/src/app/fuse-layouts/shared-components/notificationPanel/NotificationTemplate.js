@@ -1,5 +1,5 @@
-import { forwardRef } from 'react';
-import { SnackbarContent } from 'notistack';
+import {forwardRef} from 'react';
+import {SnackbarContent} from 'notistack';
 import NotificationCard from './NotificationCard';
 
 const NotificationTemplate = forwardRef((props, ref) => {

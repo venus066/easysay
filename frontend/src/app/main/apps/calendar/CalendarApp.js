@@ -1,12 +1,12 @@
 import Fab from '@material-ui/core/Fab';
 import Icon from '@material-ui/core/Icon';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import withReducer from 'app/store/withReducer';
 import clsx from 'clsx';
-import { motion } from 'framer-motion';
-import { useEffect, useRef, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import {motion} from 'framer-motion';
+import {useEffect, useRef, useState} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
@@ -14,13 +14,7 @@ import interactionPlugin from '@fullcalendar/interaction';
 import CalendarHeader from './CalendarHeader';
 import EventDialog from './EventDialog';
 import reducer from './store';
-import {
-  selectEvents,
-  openNewEventDialog,
-  openEditEventDialog,
-  updateEvent,
-  getEvents,
-} from './store/eventsSlice';
+import {getEvents, openEditEventDialog, openNewEventDialog, selectEvents, updateEvent,} from './store/eventsSlice';
 
 const useStyles = makeStyles((theme) => ({
   root: {

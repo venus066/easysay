@@ -1,4 +1,4 @@
-import { Chart } from 'react-chartjs-2';
+import {Chart} from 'react-chartjs-2';
 
 Chart.pluginService.register({
   afterDatasetsDraw(chart, easing) {

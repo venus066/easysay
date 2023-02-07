@@ -1,4 +1,4 @@
-import { lazy } from 'react';
+import {lazy} from 'react';
 
 const PricingStyle2PageConfig = {
   settings: {

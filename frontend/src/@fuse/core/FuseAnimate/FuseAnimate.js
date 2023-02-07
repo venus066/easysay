@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
-import { forwardRef, cloneElement, memo } from 'react';
-import { VelocityComponent } from 'velocity-react';
+import {cloneElement, forwardRef, memo} from 'react';
+import {VelocityComponent} from 'velocity-react';
 import 'velocity-animate/velocity.ui';
 
 const FuseAnimate = forwardRef((props, ref) => {

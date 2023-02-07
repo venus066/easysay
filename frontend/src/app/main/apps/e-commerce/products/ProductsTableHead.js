@@ -6,16 +6,16 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import TableSortLabel from '@material-ui/core/TableSortLabel';
 import Tooltip from '@material-ui/core/Tooltip';
 import clsx from 'clsx';
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { removeProducts } from '../store/productsSlice';
+import {useState} from 'react';
+import {useDispatch} from 'react-redux';
+import {removeProducts} from '../store/productsSlice';
 
 const rows = [
   {

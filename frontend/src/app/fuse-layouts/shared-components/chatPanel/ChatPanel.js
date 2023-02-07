@@ -3,23 +3,23 @@ import Avatar from '@material-ui/core/Avatar';
 import Icon from '@material-ui/core/Icon';
 import IconButton from '@material-ui/core/IconButton';
 import Paper from '@material-ui/core/Paper';
-import { useTheme, makeStyles } from '@material-ui/core/styles';
+import {makeStyles, useTheme} from '@material-ui/core/styles';
 
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import withReducer from 'app/store/withReducer';
 import clsx from 'clsx';
 import keycode from 'keycode';
-import { memo, useCallback, useEffect, useRef } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { useSwipeable } from 'react-swipeable';
+import {memo, useCallback, useEffect, useRef} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
+import {useSwipeable} from 'react-swipeable';
 import Chat from './Chat';
 import ContactList from './ContactList';
 import reducer from './store';
-import { getContacts, selectContacts } from './store/contactsSlice';
-import { openChatPanel, closeChatPanel } from './store/stateSlice';
+import {getContacts, selectContacts} from './store/contactsSlice';
+import {closeChatPanel, openChatPanel} from './store/stateSlice';
 
-import { getUserData } from './store/userSlice';
+import {getUserData} from './store/userSlice';
 
 const useStyles = makeStyles((theme) => ({
   root: {

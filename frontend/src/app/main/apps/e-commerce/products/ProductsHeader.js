@@ -2,13 +2,13 @@ import Button from '@material-ui/core/Button';
 import Icon from '@material-ui/core/Icon';
 import Input from '@material-ui/core/Input';
 import Paper from '@material-ui/core/Paper';
-import { ThemeProvider } from '@material-ui/core/styles';
+import {ThemeProvider} from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import { motion } from 'framer-motion';
-import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { selectMainTheme } from 'app/store/fuse/settingsSlice';
-import { setProductsSearchText } from '../store/productsSlice';
+import {motion} from 'framer-motion';
+import {useDispatch, useSelector} from 'react-redux';
+import {Link} from 'react-router-dom';
+import {selectMainTheme} from 'app/store/fuse/settingsSlice';
+import {setProductsSearchText} from '../store/productsSlice';
 
 function ProductsHeader(props) {
   const dispatch = useDispatch();
