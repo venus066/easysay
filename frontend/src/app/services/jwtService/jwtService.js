@@ -1,6 +1,7 @@
 import FuseUtils from '@fuse/utils/FuseUtils';
 import axios from 'axios';
 import jwtDecode from 'jwt-decode';
+import {showMessage} from "../../store/fuse/messageSlice";
 
 /* eslint-disable camelcase */
 
@@ -49,10 +50,17 @@ class JwtService extends FuseUtils.EventEmitter {
   createUser = (data) => {
     return new Promise((resolve, reject) => {
       axios.post('/api/auth/register', data).then((response) => {
-        if (response.data.user) {
-          this.setSession(response.data.access_token);
-          resolve(response.data.user);
+        const {status, data} = response;
+        if (status === 200) {
+          if (data.user) {
+            console.log(33333333);
+            this.setSession(response.data.access_token);
+            resolve(response.data.user);
+          } else {
+            resolve();
+          }
         } else {
+          console.log(22222222);
           reject(response.data.error);
         }
       });

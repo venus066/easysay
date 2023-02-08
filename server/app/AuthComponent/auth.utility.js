@@ -8,12 +8,12 @@ export const registerUser = function (req, result) {
     if (error) {
       result(error, null);
     } else {
-      let payloadData = {
+      let userInfo = {
         email: req.body.email,
         userId: resultOfQuery._id,
       };
       //   console.log(resultOfQuery);
-      let access_token = jwt.sign({ payloadData }, process.env.PRIVATE_KEY, {
+      let access_token = jwt.sign({ userInfo }, process.env.PRIVATE_KEY, {
         expiresIn: "1d",
       });
       let resultRegisterUser = {
@@ -22,7 +22,7 @@ export const registerUser = function (req, result) {
         user: {
           // displayName: resultOfQuery.displayName,
           // email: resultOfQuery.email,
-          role: 'admin',
+          role: 'user',
           data: {
             displayName: resultOfQuery.displayName,
             photoURL: 'assets/images/avatars/Abbott.jpg',
@@ -64,7 +64,7 @@ async function resetPassworSendMailLink(req, token, result, userId) {
       from: process.env.ADMIN_EMAIL_ADDRESS, // sender mail id
       to: req.body.email, // Receiver mail id
       subject: "Reset Password Link", // Subject of mail
-      text: `Reset Password Link 'http://localhost:5000/set-new-password?${token}?${userId}`, // text body
+      text: `Reset Password Link '${process.env.REACT_APP_BACKEND_URL}/set-new-password?${token}?${userId}`, // text body
     });
 
     let resultResetPasswordLink = {

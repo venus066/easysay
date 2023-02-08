@@ -63,8 +63,9 @@ export const sendMessage = createAsyncThunk(
 export const receiveMessage = createAsyncThunk(
   'chatApp/chat/receiveMessage',
   async ({ messageText, chatId, contactId }, { dispatch, getState }) => {
+    const response = await axios.post(`/api/completion`, {
     // const response = await axios.post('http://35.90.249.133:5000/api/completion', {
-    const response = await axios.post('http://localhost:5000/api/completion', {
+    // const response = await axios.post('http://localhost:5000/api/completion', {
       prompt: messageText,
     });
 

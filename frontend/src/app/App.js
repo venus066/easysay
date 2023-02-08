@@ -12,7 +12,8 @@ import withAppProviders from './withAppProviders';
 /**
  * Axios HTTP Request defaults
  */
-axios.defaults.baseURL = "http://localhost:5000";
+console.log(process.env.REACT_APP_BACKEND_URL);
+axios.defaults.baseURL = process.env.REACT_APP_BACKEND_URL;
 axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
 axios.defaults.headers.common['Content-Type'] = 'application/x-www-form-urlencoded';
 

@@ -38,7 +38,7 @@ export const registerUser = async function (req, res) {
       password: yup.string().min(3).max(50).required(),
       displayName: yup.string().min(3).max(50),
     });
-    console.log(req.body);
+
     await schema.validate(data);
     authController.registerUser(req, res);
   } catch (e) {

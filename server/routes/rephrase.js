@@ -8,8 +8,6 @@ router.post('/candidate', async (req, res, next) => {
         const prompt = req.body.params;
         const response = await getRephrase(prompt);
 
-        console.log(response);
-
         res.status(200).send({
             candidates: response
         })

@@ -1,89 +1,37 @@
 import {createSlice} from '@reduxjs/toolkit';
+import history from '@history';
 import {showMessage} from 'app/store/fuse/messageSlice';
 import firebaseService from 'app/services/firebaseService';
 import jwtService from 'app/services/jwtService';
 import {createUserSettingsFirebase, setUserData} from './userSlice';
 
 export const submitRegister =
-  ({ displayName, password, email }) =>
-  async (dispatch) => {
-    return jwtService
-      .createUser({
-        displayName,
-        password,
-        email,
-      })
-      .then((user) => {
-        dispatch(setUserData(user));
-        return dispatch(registerSuccess());
-      })
-      .catch((errors) => {
-        return dispatch(registerError(errors));
-      });
+  ({ displayName, password, email }) => {
+    return async (dispatch) => {
+      return jwtService
+          .createUser({
+            displayName,
+            password,
+            email,
+          })
+          .then((user) => {
+            if (user === undefined) {
+              history.push({
+                pathname: '/login',
+              });
+              return dispatch(showMessage({ message: 'User already registered' }))
+            } else {
+              dispatch(setUserData(user));
+              return dispatch(registerSuccess());
+            }
+          })
+          .catch((errors) => {
+            console.log('create user catch');
+            return dispatch(registerError(errors));
+          });
+    };
   };
 
-export const registerWithFirebase = (model) => async (dispatch) => {
-  if (!firebaseService.auth) {
-    console.warn("Firebase Service didn't initialize, check your configuration");
-
-    return () => false;
-  }
-  const { email, password, displayName } = model;
-
-  return firebaseService.auth
-    .createUserWithEmailAndPassword(email, password)
-    .then((response) => {
-      dispatch(
-        createUserSettingsFirebase({
-          ...response.user,
-          displayName,
-          email,
-        })
-      );
-
-      return dispatch(registerSuccess());
-    })
-    .catch((error) => {
-      const usernameErrorCodes = [
-        'auth/operation-not-allowed',
-        'auth/user-not-found',
-        'auth/user-disabled',
-      ];
-
-      const emailErrorCodes = ['auth/email-already-in-use', 'auth/invalid-email'];
-
-      const passwordErrorCodes = ['auth/weak-password', 'auth/wrong-password'];
-
-      const response = [];
-
-      if (usernameErrorCodes.includes(error.code)) {
-        response.push({
-          type: 'username',
-          message: error.message,
-        });
-      }
-
-      if (emailErrorCodes.includes(error.code)) {
-        response.push({
-          type: 'email',
-          message: error.message,
-        });
-      }
-
-      if (passwordErrorCodes.includes(error.code)) {
-        response.push({
-          type: 'password',
-          message: error.message,
-        });
-      }
-
-      if (error.code === 'auth/invalid-api-key') {
-        dispatch(showMessage({ message: error.message }));
-      }
-
-      return dispatch(registerError(response));
-    });
-};
 
 const initialState = {
   success: false,
@@ -100,7 +48,7 @@ const registerSlice = createSlice({
     },
     registerError: (state, action) => {
       state.success = false;
-      state.errors = action.payload;
+      state.errors = [action.payload];
     },
   },
   extraReducers: {},
