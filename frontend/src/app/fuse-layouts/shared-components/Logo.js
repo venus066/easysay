@@ -28,10 +28,7 @@ function Logo() {
 
   return (
     <div className={clsx(classes.root, 'flex items-center')}>
-      {/*<img className="logo-icon w-24 h-24" src="assets/images/logos/quickpen.png" alt="logo" />*/}
-      <Typography className="text-24 leading-none mx-12 font-medium logo-text" color="inherit">
-        QuickPen
-      </Typography>
+      <img className="logo-icon h-36" src="assets/images/logos/quickpen_black.png" alt="logo" />
     </div>
   );
 }
