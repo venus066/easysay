@@ -59,12 +59,15 @@ const WYSIWYGEditor = forwardRef((props, ref) => {
   }, [isOpenDialog]);
 
   useEffect(() => {
+    if (mode === 0) {
+      return;
+    }
     const selectionState = editorState.getSelection();
     const anchorKey = selectionState.getAnchorKey();
     const currentContent = editorState.getCurrentContent();
     const currentContentBlock = currentContent.getBlockForKey(anchorKey);
     const blockedText = currentContentBlock.getText();
-    if (blockedText.trim().length === 0) {
+    if (blockedText.length === 0) {
       return;
     }
 
@@ -73,10 +76,6 @@ const WYSIWYGEditor = forwardRef((props, ref) => {
     const end = selectionState.getEndOffset();
 
     const selectedText = currentContentBlock.getText().slice(start, end);
-
-    if (selectedText.trim().length === 0) {
-      return;
-    }
 
     const { sentence, s_start, s_end } = getSentence(start, end, blockedText);
 

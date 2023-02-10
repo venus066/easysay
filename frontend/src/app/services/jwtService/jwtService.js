@@ -2,6 +2,7 @@ import FuseUtils from '@fuse/utils/FuseUtils';
 import axios from 'axios';
 import jwtDecode from 'jwt-decode';
 import {showMessage} from "../../store/fuse/messageSlice";
+import history from '@history';
 
 /* eslint-disable camelcase */
 
@@ -31,7 +32,6 @@ class JwtService extends FuseUtils.EventEmitter {
 
   handleAuthentication = () => {
     const access_token = this.getAccessToken();
-
     if (!access_token) {
       this.emit('onNoAccessToken');
 

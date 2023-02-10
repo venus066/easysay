@@ -6,6 +6,7 @@ import {Component} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from '@reduxjs/toolkit';
 import {hideMessage, showMessage} from 'app/store/fuse/messageSlice';
+import history from '@history';
 
 import {logoutUser, setUserData, setUserDataAuth0, setUserDataFirebase} from './store/userSlice';
 import {loginError, loginSuccess} from "./store/loginSlice";
@@ -28,6 +29,7 @@ class Auth extends Component {
 
   jwtCheck = () =>
     new Promise((resolve) => {
+        console.log('jwtcheck');
       jwtService.on('onAutoLogin', () => {
         this.props.showMessage({ message: 'Logging in with JWT' });
         /**
@@ -59,6 +61,9 @@ class Auth extends Component {
       });
 
       jwtService.on('onNoAccessToken', () => {
+          history.push({
+              pathname: '/login',
+          });
         resolve();
       });
 
