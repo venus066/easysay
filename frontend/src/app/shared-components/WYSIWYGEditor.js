@@ -168,7 +168,7 @@ const WYSIWYGEditor = forwardRef((props, ref) => {
             editorClassName={classes.editor}
             stripPastedStyles={true}
             onEditorStateChange={onEditorStateChange}
-            editorStyle={{overflowX: 'hidden'}}
+            editorStyle={{overflowX: 'hidden', fontSize: 18}}
         />
         <CustomDialog
             onReplace={replaceText}

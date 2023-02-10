@@ -13,9 +13,14 @@ import IconButton from "@material-ui/core/IconButton";
 import Icon from "@material-ui/core/Icon";
 import {Link} from "react-router-dom";
 import {changeMode} from "../../../shared-components/store/wysiwygSlice";
+import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles((theme) => ({
-  root: {},
+  root: {
+    '& .icon-button span:first-child': {
+      flexDirection: 'column',
+    },
+  },
 }));
 
 function ToolbarLayout2(props) {
@@ -47,45 +52,49 @@ function ToolbarLayout2(props) {
           )}
 
           <div className="flex flex-1">
-            <Link to="/apps/chat" role="button">
+            <Link to="/apps/chat" role="button" className="mr-20">
               <Tooltip
                   title="Chat to AI Bot"
                   placement='bottom'
               >
-                <IconButton className="w-40 h-40 p-0">
+                <IconButton className="w-40 h-40 p-0 icon-button">
                   <Icon>chat</Icon>
+                  <Typography variant="caption">Chat</Typography>
                 </IconButton>
               </Tooltip>
             </Link>
-            <Link to="/apps/rephrase" role="button" onClick={onClickRephrase}>
+            <Link to="/apps/rephrase" role="button" onClick={onClickRephrase} className="mr-20">
               <Tooltip
                   title="Rephrase"
                   placement='bottom'
               >
-                <IconButton className="w-40 h-40 p-0">
+                <IconButton className="w-40 h-40 p-0 icon-button">
                   <Icon>edit</Icon>
+                  <Typography variant="caption">Rephrase</Typography>
                 </IconButton>
               </Tooltip>
             </Link>
 
-            <Link to="/" role="button">
+            <Link to="/" role="button" className="mr-20">
               <Tooltip
                   title="paragraph"
                   placement='bottom'
               >
-                <IconButton className="w-40 h-40 p-0">
+                <IconButton className="w-40 h-40 p-0 icon-button">
                   <Icon>grading</Icon>
+                  <Typography variant="caption">Paragraph</Typography>
                 </IconButton>
               </Tooltip>
             </Link>
 
-            <Link to="/" role="button">
+            <Link to="/" role="button" className="mr-20">
               <Tooltip
                   title="article"
                   placement='bottom'
               >
-                <IconButton className="w-40 h-40 p-0">
+                <IconButton className="w-40 h-40 p-0 icon-button">
                   <Icon>article</Icon>
+                  <Typography variant="caption">Article</Typography>
                 </IconButton>
               </Tooltip>
             </Link>

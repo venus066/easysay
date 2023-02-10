@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     },
     paperContent: {
         height: 200,
-        width: 400,
+        width: 300,
     }
 }));
 
